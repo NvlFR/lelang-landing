@@ -65,13 +65,103 @@ html {
 }
 
 body {
-  background-color: var(--bg-base);
+  background-color: #0B0C0E;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(26, 209, 185, 0.28) 0%, transparent 70%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+  background-size: 100% 100%, 28px 28px;
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* ── GLADIA ATMOSPHERE & BACKGROUND SYSTEM ── */
+.ambient-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+  opacity: 0.85;
+  animation: orbBreathe 12s ease-in-out infinite alternate;
+}
+
+.orb-hero-center {
+  width: 900px;
+  height: 900px;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(26, 209, 185, 0.45) 0%, rgba(18, 115, 105, 0.2) 40%, rgba(14, 165, 233, 0.08) 65%, transparent 80%);
+}
+
+.orb-hero-right {
+  width: 600px;
+  height: 600px;
+  top: 5%;
+  right: -150px;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.35) 0%, rgba(18, 115, 105, 0.15) 50%, transparent 80%);
+  animation: orbFloatRight 15s ease-in-out infinite alternate;
+}
+
+.orb-problem-left {
+  width: 650px;
+  height: 650px;
+  top: 15%;
+  left: -200px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.28) 0%, rgba(185, 28, 28, 0.1) 50%, transparent 80%);
+  animation: orbFloatLeft 16s ease-in-out infinite alternate;
+}
+
+.orb-bento-center {
+  width: 950px;
+  height: 950px;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(26, 209, 185, 0.38) 0%, rgba(18, 115, 105, 0.16) 45%, rgba(59, 130, 246, 0.06) 70%, transparent 85%);
+  animation: orbBreathe 14s ease-in-out infinite alternate;
+}
+
+.orb-cta-bottom {
+  width: 900px;
+  height: 900px;
+  bottom: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(26, 209, 185, 0.45) 0%, rgba(18, 115, 105, 0.22) 45%, transparent 80%);
+  animation: orbBreathe 10s ease-in-out infinite alternate;
+}
+
+@keyframes orbBreathe {
+  0% { transform: scale(1) translate(-50%, 0); opacity: 0.7; }
+  50% { transform: scale(1.22) translate(-50%, 40px); opacity: 0.95; }
+  100% { transform: scale(0.95) translate(-50%, -30px); opacity: 0.65; }
+}
+
+@keyframes orbFloatRight {
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  100% { transform: translateY(60px) scale(1.18); opacity: 0.9; }
+}
+
+@keyframes orbFloatLeft {
+  0% { transform: translateY(0) scale(1); opacity: 0.5; }
+  100% { transform: translateY(-50px) scale(1.2); opacity: 0.85; }
+}
+
+/* Laser Glow Divider Lines */
+.section-divider-glow {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(26, 209, 185, 0.4) 50%, transparent 100%);
+  border: none;
+  margin: 0;
+  position: relative;
+  z-index: 10;
 }
 
 img, svg {
@@ -979,43 +1069,205 @@ h1, h2, h3, h4, h5, h6 {
   color: #5EEAD4;
 }
 
-/* ── 12. FEATURE GRID ── */
-.feature-card {
-  background: var(--bg-glass);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+/* ── GLADIA SCROLL CUE INDICATOR ── */
+.scroll-cue-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.scroll-cue-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+}
+
+.scroll-cue-link:hover {
+  color: #1AD1B9;
+}
+
+.scroll-cue-text {
+  font-family: monospace, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.scroll-cue-line {
+  width: 1.5px;
+  height: 32px;
+  background: linear-gradient(180deg, #1AD1B9 0%, transparent 100%);
+  animation: scrollCuePulse 2s infinite;
+}
+
+@keyframes scrollCuePulse {
+  0% { transform: scaleY(0.4); opacity: 0.3; transform-origin: top; }
+  50% { transform: scaleY(1); opacity: 1; transform-origin: top; }
+  100% { transform: scaleY(0.4); opacity: 0.3; transform-origin: top; }
+}
+
+/* ── 12. GLADIA BENTO GRID ── */
+.bento-section {
+  position: relative;
+  background: radial-gradient(circle at 50% 50%, rgba(18, 115, 105, 0.06) 0%, transparent 70%);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(220px, auto);
+  gap: 1.25rem;
+}
+
+@media (max-width: 960px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bento-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 24px;
   padding: 2rem;
-  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(16px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.feature-card:hover {
-  border-color: var(--border-emerald);
+.bento-card:hover {
+  border-color: rgba(26, 209, 185, 0.35);
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px var(--emerald-glow);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px rgba(18, 115, 105, 0.12);
 }
 
-.feature-icon {
-  font-size: 2rem;
+.bento-hero-card {
+  grid-column: span 2;
+  background: radial-gradient(circle at top right, rgba(18, 115, 105, 0.15) 0%, rgba(14, 14, 17, 0.95) 70%);
+  border-color: rgba(26, 209, 185, 0.25);
+}
+
+@media (max-width: 960px) {
+  .bento-hero-card {
+    grid-column: span 1;
+  }
+}
+
+.bento-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 1.25rem;
 }
 
-.feature-title {
-  font-size: 1.1875rem;
-  margin-bottom: 0.5rem;
+.bento-pill {
+  font-family: monospace, sans-serif;
+  font-size: 0.71875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94A3B8;
 }
 
-.feature-desc {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-
+.bento-pill-emerald {
+  background: rgba(26, 209, 185, 0.15);
+  border-color: rgba(26, 209, 185, 0.35);
+  color: #1AD1B9;
 }
 
-/* ── 13. COMPARISON TABLE ── */
+.bento-visual-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(26, 209, 185, 0.2);
+}
+
+.status-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1AD1B9;
+  box-shadow: 0 0 8px #1AD1B9;
+  animation: pulseDot 1.8s infinite;
+}
+
+.status-mono-text {
+  font-family: monospace, sans-serif;
+  font-size: 0.71875rem;
+  font-weight: 700;
+  color: #1AD1B9;
+}
+
+.bento-title {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.bento-desc {
+  font-size: 0.90625rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.bento-interactive-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.preview-metric-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.85rem;
+  text-align: center;
+}
+
+.metric-val {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #1AD1B9;
+  font-family: monospace, sans-serif;
+}
+
+.metric-lbl {
+  display: block;
+  font-size: 0.71875rem;
+  color: #64748B;
+  margin-top: 0.2rem;
+}
+
+/* ── 13. HIGH-CONTRAST COMPARISON MATRIX ── */
 .table-wrapper {
   overflow-x: auto;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  background: var(--bg-glass);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(16, 16, 20, 0.75);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7);
 }
 
 .comparison-table {
@@ -1027,39 +1279,74 @@ h1, h2, h3, h4, h5, h6 {
 
 .comparison-table th,
 .comparison-table td {
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid var(--border);
+  padding: 1.35rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .comparison-table th {
-  background: rgba(0, 0, 0, 0.4);
-  font-family: var(--font-heading);
-  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 0.9375rem;
   font-weight: 700;
+  color: #94A3B8;
+  vertical-align: bottom;
+}
+
+.col-feature-title { width: 30%; }
+.col-manual-header { width: 22%; }
+.col-jasa-header { width: 22%; }
+
+.col-axiom-header {
+  width: 26%;
+  background: rgba(18, 115, 105, 0.18) !important;
+  border-top: 3px solid #1AD1B9 !important;
+  position: relative;
+}
+
+.header-badge-glow {
+  display: inline-block;
+  font-family: monospace, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  background: rgba(26, 209, 185, 0.2);
+  border: 1px solid rgba(26, 209, 185, 0.4);
+  color: #1AD1B9;
+  margin-bottom: 0.4rem;
+}
+
+.axiom-brand-title {
+  font-size: 1.0625rem;
+  font-weight: 800;
+  color: #FFFFFF;
 }
 
 .col-highlight {
   background: rgba(18, 115, 105, 0.08);
 }
 
-th.col-highlight {
-  background: rgba(18, 115, 105, 0.18);
-  color: var(--text-primary);
-  border-bottom: 2px solid var(--emerald);
-}
-
 .cell-label {
   font-weight: 600;
-  color: var(--text-secondary);
+  color: #F1F5F9;
 }
 
 .cell-cross {
-  color: #F87171;
+  color: #EF4444;
+  font-size: 0.875rem;
 }
 
-.cell-check {
-  color: #34D399;
-  font-weight: 600;
+.check-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(26, 209, 185, 0.12);
+  border: 1px solid rgba(26, 209, 185, 0.3);
+  color: #1AD1B9;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.84375rem;
 }
 
 /* ── 14. TRANSPARANSI SECTION (GOLD ACCENT) ── */
@@ -1193,6 +1480,8 @@ th.col-highlight {
 /* ── 16. FINAL CTA BANNER ── */
 .cta-banner-section {
   padding: 5rem 0 6rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .cta-banner-card {
@@ -1202,6 +1491,7 @@ th.col-highlight {
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
+  z-index: 2;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 60px var(--emerald-glow);
 }
@@ -1232,6 +1522,9 @@ th.col-highlight {
   border-top: 1px solid var(--border);
   padding: 5rem 0 2.5rem;
   font-size: 0.875rem;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .footer-grid {
