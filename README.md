@@ -14,7 +14,7 @@ lelang-landing/
 
 ## 🚀 Fitur Landing Page
 
-- **Zero Backend & Data Safety:** Tidak menggunakan form input atau database. Kontak calon klien diarahkan langsung via *WhatsApp Deep Link* dan *Telegram Deep Link*.
+- **Zero Backend & Data Safety:** Tidak menggunakan form input atau database. Kontak calon klien diarahkan langsung via *WhatsApp Deep Link*.
 - **Transparansi Layanan ("Yang Tidak Kami Janjikan"):** Menegaskan secara lugas bahwa bot adalah alat eksekusi presisi yang mematuhi limit budget, bukan jimat pasti menang melawan penawar berbudget lebih besar.
 - **Sangat Ringan & Cepat:** HTML + CSS + JS murni tanpa framework JS berat (skor Lighthouse tinggi).
 - **Desain Modern:** Dark mode elegan dengan aksen emerald (`#00E599`), sky cyan, dan kaca glassmorphism.

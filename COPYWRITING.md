@@ -1,188 +1,216 @@
 # Master Copywriting & SEO Guide — Axiom Lelang
-
-Dokumen ini berisi seluruh Naskah Penulisan (Copywriting), Struktur Pesan, Template CTA, dan Optimasi SEO untuk landing page **Axiom Lelang**.
+**Versi:** 2.0.0 | **Design Reference:** Gladia.io Design Language | **Tanggal:** 6 Agustus 2026
 
 ---
 
-## 1. 🔍 Master SEO & Meta Specifications
-
-Gunakan metadata ini pada tag `<head>` untuk memastikan skor SEO maksimal dan tampilan *link preview* menarik saat dibagikan di WhatsApp/Telegram.
-
-### Meta Tags Standards
+## 1. Meta SEO Specifications
 
 ```html
-<!-- Primary SEO Meta Tags -->
 <title>Axiom Lelang — Jasa Titip & Eksekusi Bid Lelang Presisi lelang.go.id</title>
-<meta name="title" content="Axiom Lelang — Jasa Titip & Eksekusi Bid Lelang Presisi lelang.go.id">
 <meta name="description" content="Layanan pendampingan teknis & eksekusi penawaran lelang.go.id presisi tinggi di detik penutupan. Bebas stress, tanpa delay internet, dan disiplin pada limit budget Anda.">
 <meta name="keywords" content="jasa titip bid lelang, bot lelang.go.id, eksekusi bid presisi, lelang rumah murah, lelang mobil, jasa penawaran lelang, pendampingan lelang kpknl">
-<meta name="robots" content="index, follow">
-<meta name="language" content="Indonesian">
-<meta name="author" content="Axiom Lelang">
-
-<!-- Open Graph / WhatsApp / Facebook Preview -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://axiomlelang.com/">
 <meta property="og:title" content="Axiom Lelang — Jasa Titip Bid Lelang Presisi & Bebas Stress">
 <meta property="og:description" content="Amankan lot lelang lelang.go.id tanpa terpancing perang emosi. Eksekusi presisi di detik penutupan sesuai batas aman budget Anda.">
-<meta property="og:image" content="https://axiomlelang.com/assets/og-preview.png">
-
-<!-- Twitter Card -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Axiom Lelang — Eksekusi Bid Lelang Presisi">
-<meta property="twitter:description" content="Pendampingan penawaran lelang resmi lelang.go.id di detik-detik penutupan. Bebas overbid & bebas lag.">
-<meta property="twitter:image" content="https://axiomlelang.com/assets/og-preview.png">
 ```
 
 ---
 
-## 2. 🪝 Section 1: Hook & Hero Section
+## 2. Announcement Bar (NEW — Gladia-Style)
 
-### Top Micro-Badge (Trust & Real-Time Indicator)
-> **Teks:** `⚡ Sesi Lelang Real-Time & Bebas Delay Human Error`  
-> **Fungsi:** Menarik perhatian awal, memberikan asosiasi kecepatan dan teknologi.
-
-### Main Headline (H1 — Main Hook)
-> **Headline Utama:**  
-> **"Amankan Lot Lelang Impian Bebas Stress & Emosi Overbid"**  
-> *(Variasi A/B Test Alternative: "Eksekusi Bid Lelang.go.id Presisi Detik Penutupan Tanpa Risik Overbudget")*
-
-### Subheadline (Value Proposition & Relief)
-> **Teks:**  
-> "Layanan pendampingan teknis & eksekusi penawaran di **lelang.go.id**. Sistem kami bekerja disiplin mengikuti plafon budget maksimal Anda — tanpa panik, tanpa delay internet, dan tanpa melampaui batas aman."
-
-### Call To Action Buttons (Primary & Secondary)
-1. **Primary Button (WhatsApp):**
-   - Teks Tombol: `Hubungi via WhatsApp (Konsultasi Gratis)`
-   - Pre-filled Message: `"Halo Axiom Lelang, saya ingin konsultasi jasa titip bid untuk lot lelang.go.id."`
-2. **Secondary Button (Telegram):**
-   - Teks Tombol: `Diskusi di Telegram`
-
-### Key Highlights (Stats Cards)
-- **Card 1:** `⚡ Sub-Detik` — *Waktu Eksekusi Penawaran Presisi*
-- **Card 2:** `🛡️ 100% Disiplin` — *Terpasang Budget Cap Brake Otomatis*
-- **Card 3:** `🔒 Rahasia` — *Privasi Sesi Terisolasi & Aman*
+> **Badge:** `⚡ Baru`
+> **Teks:** `Snipe Mode kini aktif untuk semua klien — eksekusi presisi di momen penutupan →`
+> **Fungsi:** Top bar tipis yang dismissible. Kesan layanan aktif & terus berkembang.
 
 ---
 
-## 3. ⚖️ Section 2: Agitation (Problem vs Solution)
+## 3. Hero Section
 
-### Section Header
-- **Title (H2):** Mengapa Banyak Penawar Kalah atau Overbid?
-- **Subtitle:** Dua jebakan terbesar penawaran lelang manual adalah emosi manusia dan kendala teknis jaringan.
+**Eyebrow Label:**
+> `EKSEKUSI PRESISI · LELANG.GO.ID`
 
-### Card 1: Risk of Manual Bidding (Agitation)
-- **Tag:** RISIKO LELANG MANUAL
-- **Title (H3):** Kelemahan Penawaran Manual
-- **Poin:**
-  1. **Jaringan Terlambat (Lag):** Server lelang sering melambat di menit-menit penutupan, menyebabkan tombol bid tidak merespon saat momen krusial.
-  2. **Terpancing Perang Harga:** Emosi sesaat membuat penawar menaikkan angka di luar rencana anggaran awal dan berujung penyesalan.
-  3. **Telat Klik di Penutupan:** Penawaran pesaing masuk di detik penutupan tanpa sempat Anda balaskan karena kalah kecepatan tangan.
-  4. **Stress dan Panik:** Memantau layar selama berjam-jam membawa tekanan psikologis yang menguras energi.
+**Headline H1 (Display Size — 2 baris):**
+> Baris 1: `Amankan Lot Lelang Impian`
+> Baris 2: `Bebas Stress & Emosi Overbid` ← gradient text
 
-### Card 2: Axiom Lelang Solution (Relief)
-- **Tag:** SOLUSI AXIOM LELANG
-- **Title (H3):** Pendampingan & Eksekusi Otomatis
-- **Poin:**
-  1. **Eksekusi Server Berkecepatan Tinggi:** Koneksi langsung ke infrastruktur server tanpa risiko freeze di browser ponsel Anda.
-  2. **Strict Budget Brake:** Sistem akan **berhenti otomatis** jika penawaran menyentuh batas plafon yang Anda tentukan di awal.
-  3. **Penawaran Presisi:** Mengajukan angka penawaran yang terhitung cepat di detik-detik krusial penutupan lelang.
-  4. **Tenang & Bebas Stress:** Anda tetap memegang kendali budget penuh tanpa perlu memelototi layar dengan cemas.
+**Subheadline (max 2 baris):**
+> `Pendampingan teknis & eksekusi penawaran di lelang.go.id — disiplin mengikuti plafon budget Anda.`
+> `Tanpa panik, tanpa delay internet, tanpa melampaui batas aman.`
 
----
+**CTA Buttons (2 berdampingan):**
+1. **Primary (Filled):** `Hubungi via WhatsApp` — ikon WA
+2. **Secondary (Outlined):** `Pelajari Cara Kerja ↓`
 
-## 4. 🔄 Section 3: Cara Kerja (3 Step Simple Workflow)
-
-### Section Header
-- **Title (H2):** 3 Langkah Sederhana Memulai
-- **Subtitle:** Alur kerja transparan untuk memastikan aset target Anda diperjuangkan secara profesional.
-
-### Step 01
-- **Judul:** Konsultasi & Tentukan Limit
-- **Deskripsi:** Pilih lot lelang target di *lelang.go.id*, lalu tetapkan **plafon batas atas budget** yang bersedia Anda keluarkan. Anda adalah penentu tunggal harga tertinggi.
-
-### Step 02
-- **Judul:** Persiapan & Pemantauan Sesi
-- **Deskripsi:** Sesi penawaran dikonfigurasi dan dipantau secara real-time menjelang jam penutupan. Sistem membaca pergerakan harga tanpa keterlibatan emosi.
-
-### Step 03
-- **Judul:** Eksekusi Detik Terakhir
-- **Deskripsi:** Saat jendela penutupan tiba, sistem mengajukan penawaran secara presisi hingga batas budget Anda. Jika menang, aset resmi menjadi milik Anda.
+**Stat Row (3 kolom bawah hero):**
+| Stat | Label |
+|---|---|
+| `Sub-Detik` | Waktu Eksekusi Penawaran |
+| `100% Disiplin` | Budget Cap Brake Otomatis |
+| `Privasi Penuh` | Sesi Terisolasi & Aman |
 
 ---
 
-## 5. 🛡️ Section 4: Transparansi & Batas Layanan (*Must Have*)
+## 4. Trust Strip
 
-### Section Header
-- **Badge Tag:** TRANSPARANSI DOKUMEN LAYANAN
-- **Title (H2):** Apa Yang <span style="color:#F59E0B">TIDAK</span> Kami Janjikan
-- **Subtitle:** Kami percaya pada kejujuran sejak awal. Mengingat integritas lelang, berikut adalah komitmen realistis yang wajib diketahui calon klien.
-
-### Card Items
-1. **Tidak Ada Garansi 100% Menang**
-   - *Deskripsi:* Tidak ada bot atau sistem apa pun yang mampu mengalahkan penawar lain jika pesaing tersebut memiliki **plafon budget yang lebih tinggi** dari budget Anda. Lelang adalah adu kekuatan anggaran.
-2. **Bot Tidak Menembus Budget Cap**
-   - *Deskripsi:* Jika harga penawaran pesaing melampaui limit budget Anda, sistem kami akan **seketika berhenti bertarung**. Kami tidak akan pernah menaikkan harga di atas kesepakatan awal demi menjaga finansial Anda.
-3. **Bukan Jasa Pengondisian Lelang**
-   - *Deskripsi:* Layanan kami murni merupakan **pendampingan eksekusi teknis penawaran** secara sah di sistem lelang resmi pemerintah (lelang.go.id), bukan praktek manipulasi atau pengondisian pemenang.
-
-### Summary Banner Copy
-> **📌 Rangkuman Etika Layanan:**  
-> Kalah lelang itu mungkin terjadi apabila pesaing bersedia membayar lebih mahal dari limit Anda. Keunggulan kami adalah memastikan Anda *tidak pernah kalah karena kelambatan teknis* dan *tidak pernah rugi karena emosi overbid*.
+> **Label:** `Beroperasi di platform resmi pemerintah:`
+> **Badge:** `lelang.go.id` · `KPKNL` · `DJKN` · `Kemenkeu`
 
 ---
 
-## 6. ❓ Section 5: FAQ (Frequently Asked Questions)
+## 5. Problem vs Solution (Tab Switcher — NEW)
 
-### Q1: Bagaimana keamanan akun lelang.go.id saya?
-> **Jawaban:** Sesi Anda diisolasi secara aman. Kami hanya mengaktifkan akses penawaran selama sesi lelang berlangsung dan tidak pernah menyimpan informasi sensitif secara permanen. Penggunaan sesi dapat diakhiri kapan saja setelah lelang selesai.
+**Eyebrow:** `KENAPA BANYAK PENAWAR GAGAL`
+**H2:** `Dua jebakan yang merugikan penawar lelang manual`
+**Subtitle:** `Emosi manusia dan kendala teknis jaringan adalah musuh terbesar di momen penutupan.`
 
-### Q2: Bagaimana jika penawaran saya kalah?
-> **Jawaban:** Uang jaminan lelang (UJL) yang telah Anda setorkan ke kas negara akan dikembalikan 100% oleh pihak lelang.go.id ke rekening Anda sesuai ketentuan resmi pemerintah. Skema biaya jasa titip kami juga fleksibel dan dibicarakan secara transparan di awal.
+**Tab 1 — "❌ Penawaran Manual":**
+1. **Jaringan Terlambat (Lag)** — Server melambat di menit penutupan, tombol bid tidak merespon.
+2. **Terpancing Perang Harga** — Emosi sesaat memicu overbid di luar anggaran.
+3. **Telat Klik di Penutupan** — Kalah kecepatan tangan dari pesaing.
+4. **Stress & Panik** — Berjam-jam memelototi layar menguras energi.
 
-### Q3: Mengapa penawaran detik terakhir (snipe) lebih efektif?
-> **Jawaban:** Penawaran yang dimasukkan terlalu awal hanya akan memancing peserta lain untuk terus menaikkan harga (bidding war awal). Dengan menahan penawaran hingga detik penutupan, pesaing tidak memiliki waktu cukup untuk merespon balasan harga Anda.
-
-### Q4: Apakah saya bisa mengubah limit budget saat lelang berlangsung?
-> **Jawaban:** Bisa, selama konfirmasi perubahan disampaikan sebelum sesi eksekusi detik terakhir dimulai. Namun kami sangat menyarankan untuk konsisten pada kalkulasi batas aman yang telah direncanakan sebelumnya.
+**Tab 2 — "✅ Solusi Axiom Lelang":**
+1. **Eksekusi Server Berkecepatan Tinggi** — Tanpa freeze di browser ponsel.
+2. **Strict Budget Brake** — Berhenti otomatis di batas plafon.
+3. **Penawaran Presisi Detik Penutupan** — Terhitung cepat tanpa telat.
+4. **Tenang & Bebas Stress** — Anda pegang kendali, sistem yang eksekusi.
 
 ---
 
-## 7. 📱 Template WhatsApp Deep Links (Pre-filled Messages)
+## 6. Cara Kerja (4-Step Horizontal — EXPANDED)
 
-Gunakan template string ini pada URL `https://wa.me/<NOMOR_WA>?text=<ENCODED_TEXT>`:
+**Eyebrow:** `CARA KERJA`
+**H2:** `4 Langkah Sederhana Memulai`
+**Subtitle:** `Alur kerja transparan dari awal hingga eksekusi — tanpa kerumitan teknis.`
 
-### Template 1: Konsultasi Umum
-```text
+| Step | Judul | Deskripsi |
+|---|---|---|
+| 01 | Konsultasi & Tentukan Limit | Pilih lot target, tetapkan plafon budget maksimal. Anda adalah penentu tunggal. |
+| 02 | Konfigurasi & Persiapan Sesi | Sesi dikonfigurasi sesuai lot target, budget cap, dan jadwal eksekusi. |
+| 03 | Monitoring Real-Time | Sistem pantau pergerakan harga tanpa keterlibatan emosi. |
+| 04 | Eksekusi Detik Penutupan | Penawaran presisi diajukan di momen krusial hingga batas budget. |
+
+---
+
+## 7. Feature Grid — Keunggulan Axiom (NEW)
+
+**Eyebrow:** `KEUNGGULAN LAYANAN`
+**H2:** `Mengapa Investor Memilih Axiom Lelang`
+**Subtitle:** `Presisi eksekusi, disiplin budget, dan privasi sesi — dirancang untuk penawar serius.`
+
+| Ikon | Judul | Deskripsi |
+|---|---|---|
+| ⚡ | Eksekusi Sub-Detik | Penawaran dalam milidetik di momen penutupan. |
+| 🛡️ | Budget Cap Otomatis | Strict limit yang tidak pernah dilanggar — tanpa pengecualian. |
+| 🔒 | Sesi Terisolasi | Data tidak disimpan permanen setelah lelang selesai. |
+| 📊 | Monitoring Real-Time | Pantau tanpa memelototi layar. Sistem bekerja saat Anda istirahat. |
+| 🏛️ | Platform Resmi | 100% melalui mekanisme resmi lelang.go.id. |
+| 💬 | Konsultasi Transparan | Diskusi terbuka sebelum ada komitmen apa pun. |
+
+---
+
+## 8. Comparison Table (NEW)
+
+**Eyebrow:** `PERBANDINGAN LANGSUNG`
+**H2:** `Lihat perbedaannya secara langsung`
+
+| Faktor | Penawaran Manual | Axiom Lelang |
+|---|---|---|
+| Kecepatan Eksekusi | ❌ Tergantung koneksi & tangan | ✅ Sub-detik, server-side |
+| Kontrol Budget | ❌ Rawan emosi & overbid | ✅ Strict budget cap otomatis |
+| Risiko Lag Server | ❌ Tinggi saat traffic puncak | ✅ Koneksi server stabil |
+| Stress Monitoring | ❌ Berjam-jam di depan layar | ✅ Sistem bekerja, Anda tenang |
+| Keamanan Akun | ❌ Session terbuka di banyak device | ✅ Sesi terisolasi per lelang |
+| Konsistensi | ❌ Bergantung psikologis | ✅ Eksekusi sesuai aturan |
+
+---
+
+## 9. Transparansi & Batas Layanan (*WAJIB*)
+
+**Eyebrow:** `TRANSPARANSI LAYANAN`
+**H2:** `Apa Yang TIDAK Kami Janjikan`
+**Subtitle:** `Kami percaya pada kejujuran sejak awal. Berikut komitmen realistis yang wajib diketahui calon klien.`
+
+**Card 1 — Tidak Ada Garansi 100% Menang:**
+> Tidak ada bot atau sistem yang mampu mengalahkan penawar dengan **plafon budget lebih tinggi**. Lelang adalah adu kekuatan anggaran.
+
+**Card 2 — Bot Tidak Menembus Budget Cap:**
+> Jika harga pesaing melampaui limit Anda, sistem kami **seketika berhenti**. Tidak akan pernah menaikkan di atas kesepakatan awal.
+
+**Card 3 — Bukan Jasa Pengondisian Lelang:**
+> Layanan kami adalah **pendampingan eksekusi teknis** secara sah di lelang.go.id — bukan manipulasi atau pengondisian pemenang.
+
+**Summary Banner:**
+> 📌 Kalah lelang mungkin terjadi jika pesaing bayar lebih mahal. Keunggulan kami: *tidak pernah kalah karena kelambatan teknis* dan *tidak pernah rugi karena emosi overbid*.
+
+---
+
+## 10. FAQ Accordion
+
+**Eyebrow:** `PERTANYAAN UMUM`
+**H2:** `Pertanyaan Sering Diajukan`
+
+**Q1:** Bagaimana keamanan akun lelang.go.id saya?
+> Sesi terisolasi aman. Akses penawaran hanya aktif selama sesi berlangsung — tidak ada data sensitif tersimpan permanen.
+
+**Q2:** Bagaimana jika penawaran saya kalah?
+> UJL dikembalikan 100% oleh lelang.go.id ke rekening Anda sesuai ketentuan resmi. Biaya jasa titip bersifat fleksibel dan disepakati di awal.
+
+**Q3:** Mengapa penawaran detik terakhir (snipe) lebih efektif?
+> Penawaran terlalu awal memancing bidding war. Menahan penawaran hingga detik penutupan mencegah pesaing merespon balik.
+
+**Q4:** Apakah saya bisa mengubah limit budget saat lelang berlangsung?
+> Bisa, sebelum sesi eksekusi detik terakhir dimulai. Namun sangat disarankan konsisten pada kalkulasi batas aman awal.
+
+**Q5:** Berapa biaya layanan Axiom Lelang?
+> Dibicarakan transparan di awal konsultasi berdasarkan lot target dan kompleksitas sesi. Tidak ada biaya tersembunyi.
+
+**Q6:** Apakah layanan ini legal?
+> Ya. Seluruh proses melalui mekanisme resmi lelang.go.id. Kami penyedia jasa pendampingan teknis independen — bukan pengondisian pemenang.
+
+---
+
+## 11. Final CTA Banner
+
+**H2:** `Siap Mengamankan Lot Lelang Berikutnya?`
+**Subtext:** `Diskusikan lot target dan strategi penawaran terbaik secara gratis — tanpa komitmen awal.`
+**CTA 1 (Primary):** `Mulai Konsultasi WhatsApp`
+**CTA 2 (Secondary):** `Hubungi via Telegram`
+
+---
+
+## 12. WhatsApp Deep Links
+
+**Template 1 — Konsultasi Umum:**
+```
 Halo Axiom Lelang, saya ingin konsultasi jasa titip bid untuk lot lelang.go.id.
 ```
-*Encoded URL format:*  
-`https://wa.me/628XXXXXXXXX?text=Halo%20Axiom%20Lelang,%20saya%20ingin%20konsultasi%20jasa%20titip%20bid%20untuk%20lot%20lelang.go.id`
 
-### Template 2: Pengajuan Lot Spesifik
-```text
-Halo Axiom Lelang, saya tertarik menitip bid untuk lot lelang dengan rincian berikut:
-- Link Lot / Nama Aset: [Isi di sini]
-- Plafon Budget Maksimal: Rp [Isi Nominal]
-
-Mohon info ketersediaan sesi dan estimasi biaya pendampingannya. Terima kasih!
+**Template 2 — Pengajuan Lot Spesifik:**
 ```
-*Encoded URL format:*  
-`https://wa.me/628XXXXXXXXX?text=Halo%20Axiom%20Lelang,%20saya%20tartarik%20menitip%20bid%20untuk%20lot%20lelang.`
+Halo Axiom Lelang, saya tertarik menitip bid untuk:
+- Link Lot / Nama Aset: [Isi]
+- Plafon Budget Maksimal: Rp [Nominal]
+Mohon info ketersediaan sesi dan estimasi biaya. Terima kasih!
+```
 
 ---
 
-## 8. ⚖️ Section 6: Footer & Legal Disclaimer
+## 13. Footer
 
-### Brand Description
-> **Axiom Lelang** — Layanan pendampingan teknis & eksekusi penawaran presisi untuk lelang resmi lelang.go.id.
+**Brand Desc:** Axiom Lelang — Layanan pendampingan teknis & eksekusi penawaran presisi untuk lelang resmi lelang.go.id.
 
-### Legal Disclaimer Statement
-> **Disclaimer Hukum:** Axiom Lelang adalah penyedia jasa pendampingan teknis independen. Kami bukan merupakan bagian resmi dari DJKN, KPKNL, atau Kementerian Keuangan Republik Indonesia. Seluruh proses penawaran dilakukan secara sah mengikuti mekanisme resmi platform lelang.go.id.
+**Link Groups:**
+| Layanan | Transparansi | Kontak |
+|---|---|---|
+| Cara Kerja | Batas Layanan | WhatsApp Konsultasi |
+| Keunggulan | FAQ | Telegram |
+| Perbandingan | Etika Layanan | — |
 
-### Copyright Line
-> `&copy; 2026 Axiom Lelang. Hak Cipta Dilindungi.`
+**Legal Disclaimer:**
+> Axiom Lelang adalah penyedia jasa pendampingan teknis independen. Bukan bagian resmi dari DJKN, KPKNL, atau Kementerian Keuangan RI. Seluruh proses penawaran dilakukan secara sah mengikuti mekanisme resmi lelang.go.id.
+
+**Copyright:** `© 2026 Axiom Lelang. Hak Cipta Dilindungi.`
 
 ---
 
-&copy; 2026 Axiom Lelang. Master Copywriting & SEO Reference Document.
+© 2026 Axiom Lelang. Master Copywriting & SEO Reference — Versi 2.0.0 (Gladia-Style Redesign)

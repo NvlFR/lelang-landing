@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50" fill="none">
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1AD1B9" />
+      <stop offset="100%" stop-color="#127369" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB" />
+      <stop offset="100%" stop-color="#C89B3C" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Mark (Geometric A + Gavel/Shield Concept) -->
+  <g transform="translate(4, 3)">
+    <!-- Outer Octagon / Diamond Shield Background -->
+    <rect x="2" y="2" width="40" height="40" rx="10" fill="#171717" stroke="url(#emeraldGrad)" stroke-width="1.5" />
+    
+    <!-- Stylized 'A' Beam Left -->
+    <path d="M 12 34 L 22 10 L 26 10 L 16 34 Z" fill="url(#emeraldGrad)" />
+    
+    <!-- Stylized 'A' Beam Right -->
+    <path d="M 32 34 L 22 10 L 26 10 L 36 34 Z" fill="url(#emeraldGrad)" />
+    
+    <!-- Gavel / Crossbar Accent in Gold -->
+    <path d="M 14 24 L 30 24 L 30 27 L 14 27 Z" fill="url(#goldGrad)" rx="1.5" />
+    
+    <!-- Glowing Diamond Peak -->
+    <polygon points="22,7 25,10 22,13 19,10" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="54" y="28" font-family="'Outfit', 'Inter', sans-serif" font-weight="800" font-size="20" fill="url(#textGrad)" letter-spacing="1.5">AXIOM</text>
+  <text x="54" y="42" font-family="'Outfit', 'Inter', sans-serif" font-weight="600" font-size="11" fill="url(#goldGrad)" letter-spacing="3.5">LELANG</text>
+</svg>
