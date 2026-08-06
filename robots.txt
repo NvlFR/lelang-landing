@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://axiomlelang.com/sitemap.xml
+Sitemap: https://joki-lelang.axiomsystemsco.com/sitemap.xml
