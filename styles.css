@@ -531,13 +531,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-  font-size: clamp(2.25rem, 4.5vw, 3.875rem);
+  font-size: clamp(2rem, 4vw, 3.625rem);
   font-weight: 800;
   letter-spacing: -0.025em;
-  line-height: 1.16;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
-  max-width: 960px;
-  text-wrap: balance;
+  max-width: 1100px;
+}
+
+.hero-title-line1 {
+  display: inline-block;
 }
 
 .hero-description {
