@@ -1,5 +1,5 @@
 /**
- * Axiom Lelang — Main JavaScript (v2.0 Gladia Redesign)
+ * Axiom Lelang — Main JavaScript (v2.0 Performance Optimized)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const announcementClose = document.getElementById('announcement-close');
 
   if (announcementClose && announcementBar) {
-    // Check if previously closed in session
     if (sessionStorage.getItem('announcementClosed') === 'true') {
       announcementBar.style.display = 'none';
     }
@@ -20,16 +19,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── 2. Navbar Scroll Effect ──
+  // ── 2. Navbar Scroll Effect (Optimized with Passive Listener & rAF) ──
   const navbar = document.getElementById('navbar');
-  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+  let ticking = false;
+
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
 
   // ── 3. Mobile Navigation Menu Toggle ──
   const mobileToggle = document.getElementById('mobile-toggle');
@@ -40,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('mobile-open');
     });
 
-    // Close menu when clicking links
     navMenu.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('mobile-open');
@@ -76,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── 5. FAQ Accordion ──
+  // ── 5. FAQ Accordion (Optimized Layout Batching) ──
   const faqAccordion = document.getElementById('faq-accordion');
 
   if (faqAccordion) {
@@ -86,42 +93,50 @@ document.addEventListener('DOMContentLoaded', () => {
       const trigger = item.querySelector('.faq-trigger');
       const panel = item.querySelector('.faq-panel');
 
-      trigger.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
+      if (trigger && panel) {
+        trigger.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
 
-        // Close all other items
-        faqItems.forEach(otherItem => {
-          otherItem.classList.remove('active');
-          otherItem.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
-          otherItem.querySelector('.faq-panel').style.maxHeight = null;
+          // Batch reads and writes using requestAnimationFrame
+          window.requestAnimationFrame(() => {
+            faqItems.forEach(otherItem => {
+              otherItem.classList.remove('active');
+              const otherTrigger = otherItem.querySelector('.faq-trigger');
+              const otherPanel = otherItem.querySelector('.faq-panel');
+              if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+              if (otherPanel) otherPanel.style.maxHeight = null;
+            });
+
+            if (!isActive) {
+              item.classList.add('active');
+              trigger.setAttribute('aria-expanded', 'true');
+              const scrollHeight = panel.scrollHeight;
+              panel.style.maxHeight = scrollHeight + 'px';
+            }
+          });
         });
-
-        // Toggle current item
-        if (!isActive) {
-          item.classList.add('active');
-          trigger.setAttribute('aria-expanded', 'true');
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-        }
-      });
+      }
     });
   }
 
   // ── 6. Scroll Reveal Animation (IntersectionObserver) ──
   const revealElements = document.querySelectorAll('.reveal');
 
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
     });
-  }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
-  });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+    revealElements.forEach(el => revealObserver.observe(el));
+  }
 
   // ── 7. Smooth Scroll Offset for Anchor Links ──
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

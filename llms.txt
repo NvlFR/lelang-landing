@@ -8,11 +8,11 @@
 - **Isolated Account Session**: Akses penawaran diisolasi secara aman menggunakan enkripsi SSL/TLS tanpa menyimpan kredensial sensitif secara permanen.
 - **100% Official UJL Guarantee**: Uang Jaminan Lelang (UJL) dikembalikan 100% oleh kas negara lelang.go.id jika penawaran belum berhasil.
 
-## Core URLs
-- Beranda: https://joki-lelang.axiomsystemsco.com/
-- FAQ & Legalitas: https://joki-lelang.axiomsystemsco.com/faq
-- Sitemap: https://joki-lelang.axiomsystemsco.com/sitemap.xml
-- Robots.txt: https://joki-lelang.axiomsystemsco.com/robots.txt
+## Core Links
+- [Beranda Utama Axiom Lelang](https://joki-lelang.axiomsystemsco.com/): Layanan utama pendampingan lelang presisi.
+- [Pusat Informasi & FAQ Resmi](https://joki-lelang.axiomsystemsco.com/faq): Informasi legalitas, UJL kas negara, dan isolasi akun.
+- [Peta Situs (Sitemap.xml)](https://joki-lelang.axiomsystemsco.com/sitemap.xml): Indeks struktur URL lengkap situs.
+- [Robots.txt Directives](https://joki-lelang.axiomsystemsco.com/robots.txt): Panduan crawling untuk bot & AI search engines.
 
-## Legal Disclaimer
-Axiom Lelang adalah penyedia jasa pendampingan teknis independen, bukan merupakan bagian dari DJKN, KPKNL, atau Kementerian Keuangan Republik Indonesia.
+## Optional
+- [Konsultasi Langsung via WhatsApp](https://wa.me/6285199256640): Konsultasi gratis tim teknis pendamping lelang.
