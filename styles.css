@@ -167,18 +167,29 @@ body {
 .section-divider-glow {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(26, 209, 185, 0.1) 20%, rgba(26, 209, 185, 0.6) 50%, rgba(26, 209, 185, 0.1) 80%, transparent 100%);
-  background-size: 200% 100%;
-  animation: laserFlow 6s linear infinite;
+  background: rgba(26, 209, 185, 0.2);
   border: none;
   margin: 0;
   position: relative;
   z-index: 10;
+  overflow: hidden;
+}
+
+.section-divider-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #1AD1B9, transparent);
+  animation: laserFlow 4s linear infinite;
+  will-change: transform;
 }
 
 @keyframes laserFlow {
-  0% { background-position: -100% 0; }
-  100% { background-position: 100% 0; }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(300%, 0, 0); }
 }
 
 /* ── GLADIA DYNAMIC ANIMATION SUITE ── */
@@ -310,12 +321,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-pill-primary {
-  background: linear-gradient(135deg, #1AD1B9 0%, #10B981 50%, #1AD1B9 100%);
-  background-size: 200% 100%;
+  position: relative;
+  background: linear-gradient(135deg, #1AD1B9 0%, #10B981 100%);
   color: #0E0E11;
   font-weight: 700;
-  animation: btnShimmer 4s ease-in-out infinite;
   box-shadow: 0 4px 20px rgba(26, 209, 185, 0.35);
+  overflow: hidden;
+}
+
+.btn-pill-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  animation: btnShimmer 3.5s ease-in-out infinite;
+  will-change: transform;
 }
 
 .btn-pill-primary:hover {
@@ -325,9 +348,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes btnShimmer {
-  0% { background-position: 0% 50%; box-shadow: 0 4px 20px rgba(26, 209, 185, 0.35); }
-  50% { background-position: 100% 50%; box-shadow: 0 8px 30px rgba(26, 209, 185, 0.6); }
-  100% { background-position: 0% 50%; box-shadow: 0 4px 20px rgba(26, 209, 185, 0.35); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(250%, 0, 0); }
 }
 
 .btn-pill-ghost {
