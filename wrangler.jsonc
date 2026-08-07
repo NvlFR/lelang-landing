@@ -1,13 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "joki-lelang",
+  "main": "index.js",
   "compatibility_date": "2026-08-06",
-  "observability": {
-    "enabled": true
-  },
   "assets": {
     "directory": ".",
-    "html_handling": "auto-trailing-slash",
-    "not_found_handling": "none"
+    "binding": "ASSETS"
   }
 }
