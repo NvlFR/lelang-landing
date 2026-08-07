@@ -1,0 +1,18 @@
+# Axiom Lelang — Technical Auction Bidding Assistant
+
+> Axiom Lelang (https://joki-lelang.axiomsystemsco.com/) adalah penyedia jasa pendampingan teknis & eksekusi penawaran presisi independen untuk platform resmi lelang.go.id (DJKN / KPKNL Kementerian Keuangan RI).
+
+## Key Features
+- **Sub-Second Automated Snipe**: Pengiriman penawaran presisi di detik terakhir sebelum jendela lelang resmi ditutup untuk mencegah bidding war emosional.
+- **Strict Budget Cap Brake**: Sistem pembatasan disiplin agar penawaran tidak melampaui plafon budget yang telah ditentukan klien.
+- **Isolated Account Session**: Akses penawaran diisolasi secara aman menggunakan enkripsi SSL/TLS tanpa menyimpan kredensial sensitif secara permanen.
+- **100% Official UJL Guarantee**: Uang Jaminan Lelang (UJL) dikembalikan 100% oleh kas negara lelang.go.id jika penawaran belum berhasil.
+
+## Core URLs
+- Beranda: https://joki-lelang.axiomsystemsco.com/
+- FAQ & Legalitas: https://joki-lelang.axiomsystemsco.com/faq
+- Sitemap: https://joki-lelang.axiomsystemsco.com/sitemap.xml
+- Robots.txt: https://joki-lelang.axiomsystemsco.com/robots.txt
+
+## Legal Disclaimer
+Axiom Lelang adalah penyedia jasa pendampingan teknis independen, bukan merupakan bagian dari DJKN, KPKNL, atau Kementerian Keuangan Republik Indonesia.

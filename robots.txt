@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Directives for AI Crawlers (Google Gemini, OpenAI, Claude, etc.)
+# Directives for AI Crawlers (Google Gemini, OpenAI, Claude, Perplexity, etc.)
 User-agent: Google-Extended
 Allow: /
 
@@ -10,5 +10,11 @@ Allow: /
 
 User-agent: PerplexityBot
 Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# AI Document Reference
+# llms.txt: https://joki-lelang.axiomsystemsco.com/llms.txt
 
 Sitemap: https://joki-lelang.axiomsystemsco.com/sitemap.xml

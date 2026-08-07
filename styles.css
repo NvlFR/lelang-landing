@@ -16,9 +16,9 @@
   --border-emerald : rgba(18, 115, 105, 0.4);
   --border-gold    : rgba(200, 155, 60, 0.4);
 
-  --text-primary   : #F8F6ED;   /* Cream */
-  --text-secondary : #D8D2C2;   /* Slate light */
-  --text-muted     : #9CA3AF;   /* Muted gray */
+  --text-primary   : #FFFFFF;   /* Pure White */
+  --text-secondary : #E2E8F0;   /* Bright Light Slate */
+  --text-muted     : #CBD5E1;   /* High Contrast Muted */
   --text-dark      : #111111;
 
   --emerald        : #127369;   /* Brand Emerald Accent */
