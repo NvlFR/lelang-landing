@@ -54,8 +54,7 @@ function estimateTokens(markdown) {
   return Math.ceil(markdown.length / 4);
 }
 
-export async function onRequest(context) {
-  const { request, env } = context;
+export async function handleRequest(request, env) {
   const requestUrl = new URL(request.url);
 
   if (requestUrl.pathname.startsWith('/_markdown/')) {
@@ -69,15 +68,15 @@ export async function onRequest(context) {
     });
   }
 
-  if (!['GET', 'HEAD'].includes(request.method)) return context.next();
-  if (!acceptsMarkdown(request.headers.get('Accept'))) return context.next();
+  if (!['GET', 'HEAD'].includes(request.method)) return env.ASSETS.fetch(request);
+  if (!acceptsMarkdown(request.headers.get('Accept'))) return env.ASSETS.fetch(request);
 
   const assetPath = MARKDOWN_ASSETS.get(normalizePagePath(requestUrl.pathname));
-  if (!assetPath) return context.next();
+  if (!assetPath) return env.ASSETS.fetch(request);
 
   const assetUrl = new URL(assetPath, requestUrl.origin);
   const assetResponse = await env.ASSETS.fetch(assetUrl);
-  if (!assetResponse.ok) return context.next();
+  if (!assetResponse.ok) return env.ASSETS.fetch(request);
 
   const markdown = await assetResponse.text();
   const headers = new Headers(assetResponse.headers);
@@ -97,3 +96,7 @@ export async function onRequest(context) {
     headers
   });
 }
+
+export default {
+  fetch: handleRequest
+};

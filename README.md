@@ -19,9 +19,10 @@ lelang-landing/
 ├── scripts/generate-pages.mjs # Generator halaman konten
 ├── scripts/generate-markdown.mjs # Generator representasi Markdown untuk agents
 ├── scripts/validate-site.mjs  # Validasi metadata, schema, link, dan sitemap
-├── functions/_middleware.js   # Content negotiation HTML/Markdown
+├── worker.js                  # Content negotiation HTML/Markdown
 ├── _markdown/                 # Mirror Markdown yang dipregenerasi
-├── _routes.json               # Batas route yang menjalankan Pages Functions
+├── .assetsignore              # Aset sumber yang tidak diunggah ke publik
+├── wrangler.jsonc             # Binding aset dan selective Worker routing
 ├── styles.css                 # Design system dan layout konten
 ├── script.js                  # Interaktivitas UI ringan
 ├── sitemap.xml
@@ -62,12 +63,11 @@ curl https://joki-lelang.axiomsystemsco.com/jasa-joki-lelang/ \
 
 ## 🌐 Cara Deploy
 
-### 1. Cloudflare Pages (Rekomendasi)
+### 1. Cloudflare Workers (Rekomendasi)
 1. Push repo ini ke GitHub / GitLab.
-2. Buka dashboard Cloudflare Pages → **Create a project** → Connect Git.
-3. Set **Build command**: (kosongkan)
-4. Set **Build output directory**: `/` (atau `.` root).
-5. Klik **Save and Deploy**.
+2. Hubungkan repository melalui Workers Builds.
+3. Gunakan deploy command `npx wrangler deploy`.
+4. Wrangler mengunggah aset statis dan `worker.js` dalam satu deployment.
 
 ### 2. GitHub Pages
 1. Masuk ke **Settings** repository di GitHub.
