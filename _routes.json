@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "include": [
+    "/",
+    "/jasa-joki-lelang",
+    "/jasa-joki-lelang/",
+    "/cara-kerja",
+    "/cara-kerja/",
+    "/biaya",
+    "/biaya/",
+    "/faq",
+    "/faq/",
+    "/tentang",
+    "/tentang/",
+    "/kontak",
+    "/kontak/",
+    "/case-study",
+    "/case-study/",
+    "/bukti-kemenangan",
+    "/bukti-kemenangan/",
+    "/panduan/*",
+    "/_markdown/*"
+  ],
+  "exclude": []
+}

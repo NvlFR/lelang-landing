@@ -17,7 +17,11 @@ lelang-landing/
 ├── bukti-kemenangan/           # Galeri bukti hasil sesi dan aset SVG
 ├── panduan/                   # Knowledge base lelang online
 ├── scripts/generate-pages.mjs # Generator halaman konten
+├── scripts/generate-markdown.mjs # Generator representasi Markdown untuk agents
 ├── scripts/validate-site.mjs  # Validasi metadata, schema, link, dan sitemap
+├── functions/_middleware.js   # Content negotiation HTML/Markdown
+├── _markdown/                 # Mirror Markdown yang dipregenerasi
+├── _routes.json               # Batas route yang menjalankan Pages Functions
 ├── styles.css                 # Design system dan layout konten
 ├── script.js                  # Interaktivitas UI ringan
 ├── sitemap.xml
@@ -32,6 +36,7 @@ lelang-landing/
 - **Knowledge Base:** Delapan panduan lelang online yang merujuk sumber resmi DJKN.
 - **Transparansi Layanan:** Menegaskan independensi Axiom Systems, disiplin limit, dan tidak adanya jaminan kemenangan.
 - **Bukti Hasil:** Galeri dokumentasi hasil dan log penawaran dari sesi yang telah ditangani.
+- **Markdown for Agents:** `Accept: text/markdown` menghasilkan konten Markdown bersih, sedangkan browser tetap menerima HTML.
 - **Sangat Ringan & Cepat:** HTML + CSS + JS murni tanpa framework JS berat (skor Lighthouse tinggi).
 - **Desain Modern:** Dark mode elegan dengan aksen emerald (`#00E599`), sky cyan, dan kaca glassmorphism.
 
@@ -39,9 +44,20 @@ lelang-landing/
 
 ```bash
 node scripts/generate-pages.mjs
+node scripts/generate-markdown.mjs
 node scripts/validate-site.mjs
+node scripts/validate-markdown-negotiation.mjs
 npx html-validate 404.html index.html faq/index.html jasa-joki-lelang/index.html cara-kerja/index.html biaya/index.html tentang/index.html kontak/index.html case-study/index.html bukti-kemenangan/index.html panduan/*/index.html
 npx wrangler pages dev .
+```
+
+Generator Markdown membutuhkan `pandoc`. Setelah halaman HTML berubah, jalankan generator halaman lalu generator Markdown agar kedua representasi tetap sinkron.
+
+Pengujian content negotiation:
+
+```bash
+curl https://joki-lelang.axiomsystemsco.com/jasa-joki-lelang/ \
+  -H "Accept: text/markdown"
 ```
 
 ## 🌐 Cara Deploy
