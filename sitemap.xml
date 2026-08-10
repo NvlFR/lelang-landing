@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://joki-lelang.axiomsystemsco.com/</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://joki-lelang.axiomsystemsco.com/images/logo-axiom-dark.png</image:loc>
-      <image:title>Axiom Lelang — Joki Lelang &amp; Eksekusi Bid Presisi lelang.go.id</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://joki-lelang.axiomsystemsco.com/faq</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://joki-lelang.axiomsystemsco.com/images/logo-axiom-dark.png</image:loc>
-      <image:title>FAQ &amp; Pusat Informasi Axiom Lelang</image:title>
-    </image:image>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://joki-lelang.axiomsystemsco.com/</loc><lastmod>2026-08-10</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/jasa-joki-lelang/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/cara-kerja/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/biaya/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/faq/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/tentang/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/kontak/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/case-study/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-lelang-go-id/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/panduan/cara-ikut-lelang-online/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/panduan/cara-daftar-lelang-go-id/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-open-bidding/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/panduan/cara-menentukan-budget-lelang/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/panduan/cara-menghindari-overbid/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-uang-jaminan-lelang/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://joki-lelang.axiomsystemsco.com/panduan/apa-yang-terjadi-saat-lelang-ditutup/</loc><lastmod>2026-08-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

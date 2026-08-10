@@ -1,11 +1,11 @@
 User-agent: *
 Allow: /
 
-# Directives for AI Crawlers (Google Gemini, OpenAI, Claude, Perplexity, etc.)
-User-agent: Google-Extended
+# AI search and answer-engine crawlers intentionally allowed.
+User-agent: GPTBot
 Allow: /
 
-User-agent: GPTBot
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: PerplexityBot
@@ -14,7 +14,13 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-# AI Document Reference
-# llms.txt: https://joki-lelang.axiomsystemsco.com/llms.txt
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 Sitemap: https://joki-lelang.axiomsystemsco.com/sitemap.xml

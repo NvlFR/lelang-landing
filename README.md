@@ -1,23 +1,48 @@
-# Axiom Lelang — Landing Page Statis
+# Axiom Lelang — Website Statis Axiom Systems
 
-Halaman landing page statis untuk layanan pendampingan & eksekusi bid lelang di `lelang.go.id`.
+Website statis untuk layanan pendampingan dan eksekusi penawaran lelang online dari Axiom Systems.
 
 ## 📁 Struktur Repo
 
 ```text
 lelang-landing/
-├── index.html   # Struktur HTML5 (Semantic, SEO-friendly, No Backend)
-├── styles.css   # Vanilla CSS Modern System (Dark Mode, Glassmorphism)
-├── script.js   # Interaktivitas UI ringan (FAQ, Navbar scroll, Smooth scroll)
-└── README.md    # Dokumentasi deployment
+├── index.html                 # Beranda
+├── jasa-joki-lelang/index.html # Halaman layanan
+├── cara-kerja/index.html       # Alur pendampingan
+├── biaya/index.html            # Penjelasan biaya
+├── faq/index.html              # Pertanyaan umum
+├── tentang/index.html          # Entity Axiom Systems
+├── kontak/index.html           # Kanal kontak resmi
+├── case-study/index.html       # Standar publikasi case study
+├── bukti-kemenangan/           # Galeri bukti hasil sesi dan aset SVG
+├── panduan/                   # Knowledge base lelang online
+├── scripts/generate-pages.mjs # Generator halaman konten
+├── scripts/validate-site.mjs  # Validasi metadata, schema, link, dan sitemap
+├── styles.css                 # Design system dan layout konten
+├── script.js                  # Interaktivitas UI ringan
+├── sitemap.xml
+├── robots.txt
+└── llms.txt
 ```
 
 ## 🚀 Fitur Landing Page
 
-- **Zero Backend & Data Safety:** Tidak menggunakan form input atau database. Kontak calon klien diarahkan langsung via *WhatsApp Deep Link*.
-- **Transparansi Layanan ("Yang Tidak Kami Janjikan"):** Menegaskan secara lugas bahwa bot adalah alat eksekusi presisi yang mematuhi limit budget, bukan jimat pasti menang melawan penawar berbudget lebih besar.
+- **Zero Backend & Data Safety:** Tidak menggunakan form input atau database. Kontak calon klien diarahkan langsung melalui WhatsApp.
+- **AI Search Ready:** Jawaban langsung, metadata unik, schema, breadcrumb, internal link, sitemap, dan `llms.txt`.
+- **Knowledge Base:** Delapan panduan lelang online yang merujuk sumber resmi DJKN.
+- **Transparansi Layanan:** Menegaskan independensi Axiom Systems, disiplin limit, dan tidak adanya jaminan kemenangan.
+- **Bukti Hasil:** Galeri dokumentasi hasil dan log penawaran dari sesi yang telah ditangani.
 - **Sangat Ringan & Cepat:** HTML + CSS + JS murni tanpa framework JS berat (skor Lighthouse tinggi).
 - **Desain Modern:** Dark mode elegan dengan aksen emerald (`#00E599`), sky cyan, dan kaca glassmorphism.
+
+## Validasi Lokal
+
+```bash
+node scripts/generate-pages.mjs
+node scripts/validate-site.mjs
+npx html-validate 404.html index.html faq/index.html jasa-joki-lelang/index.html cara-kerja/index.html biaya/index.html tentang/index.html kontak/index.html case-study/index.html bukti-kemenangan/index.html panduan/*/index.html
+npx wrangler pages dev .
+```
 
 ## 🌐 Cara Deploy
 
