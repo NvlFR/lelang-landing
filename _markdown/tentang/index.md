@@ -1,20 +1,30 @@
 ---
-title: "Tentang Axiom Systems dan Axiom Lelang"
-description: "Kenali Axiom Systems, penyedia layanan Axiom Lelang untuk pendampingan dan eksekusi penawaran lelang online."
+title: "Tentang Axiom Lelang dan Axiom Systems"
+description: "Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems untuk pengguna lelang.go.id di Indonesia."
 image: "https://joki-lelang.axiomsystemsco.com/images/logo-axiom-dark.png"
 canonical: "https://joki-lelang.axiomsystemsco.com/tentang/"
 ---
 TENTANG KAMI
 
-# Tentang Axiom Systems dan Axiom Lelang
+# Tentang Axiom Lelang dan Axiom Systems
 
-Axiom Systems adalah penyedia independen di balik Axiom Lelang, layanan pendampingan dan eksekusi penawaran lelang online. Fokus layanan adalah membantu klien menjaga disiplin anggaran dan menjalankan instruksi secara terstruktur pada platform lelang.go.id, tanpa menjanjikan kemenangan atau mengatasnamakan instansi pemerintah.
+Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems untuk pengguna lelang.go.id di Indonesia. Layanan membantu klien menyiapkan lot, menetapkan limit, dan menjalankan instruksi secara terstruktur melalui mekanisme platform.
 
 Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
 
 ## Identitas layanan
 
-**Axiom Systems** adalah entitas penyedia layanan. **Axiom Lelang** adalah nama layanan yang digunakan untuk pendampingan lelang online. Penyebutan ini diterapkan konsisten pada halaman, metadata, dan structured data website.
+**Axiom Lelang** adalah nama layanan pendampingan penawaran lelang online. **Axiom Systems** adalah penyedia layanan yang mengelola website, konsultasi, dan pelaksanaan instruksi klien.
+
+Axiom Systems yang dimaksud pada website ini adalah penyedia Axiom Lelang di Indonesia dan tidak berafiliasi dengan perusahaan lain yang menggunakan nama serupa.
+
+## Informasi resmi Axiom Lelang
+
+- **Nama layanan:** Axiom Lelang.
+- **Penyedia:** Axiom Systems.
+- **Wilayah layanan:** Indonesia.
+- **Website:** joki-lelang.axiomsystemsco.com.
+- **Kanal konsultasi:** WhatsApp yang ditautkan dari halaman kontak resmi.
 
 ## Prinsip kerja
 

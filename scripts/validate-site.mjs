@@ -35,7 +35,8 @@ for (const file of pages) {
     ['title', count(html, /<title>[^<]+<\/title>/gi), 1],
     ['meta description', count(html, /<meta\s+name="description"\s+content="[^"]+"\s*\/?>/gi), 1],
     ['canonical', count(html, /<link\s+rel="canonical"\s+href="[^"]+"\s*\/?>/gi), 1],
-    ['H1', count(html, /<h1(?:\s[^>]*)?>/gi), 1]
+    ['H1', count(html, /<h1(?:\s[^>]*)?>/gi), 1],
+    ['og:site_name Axiom Lelang', count(html, /<meta\s+property="og:site_name"\s+content="Axiom Lelang"\s*\/?>/gi), 1]
   ];
 
   for (const [label, actual, expected] of checks) {
@@ -90,10 +91,31 @@ const forbiddenClaims = [
   /SSL\/TLS 256/i,
   /LATENCY:\s*\d+/i,
   /Sub-Second Automated/i,
-  /100% Official UJL/i
+  /100% Official UJL/i,
+  /<meta[^>]+name="keywords"/i,
+  /bid lelang otomatis/i,
+  /axiom-execution-engine/i,
+  /Sistem Bekerja Mandiri/i,
+  /Joki Lelang Biasa/i
 ];
 for (const pattern of forbiddenClaims) {
   if (publicText.some((html) => pattern.test(html))) errors.push(`Klaim terlarang masih ditemukan: ${pattern}`);
+}
+
+const homepage = publicText[0];
+if (!homepage.includes('<title>Axiom Lelang | Pendampingan Penawaran Lelang Online</title>')) {
+  errors.push('Homepage belum memakai title entity-first Axiom Lelang');
+}
+if (!homepage.includes('"@type": "Brand"') || !homepage.includes('"name": "Axiom Lelang"')) {
+  errors.push('Homepage belum mendefinisikan Brand Axiom Lelang pada JSON-LD');
+}
+if (!homepage.includes('"@type": "Organization"') || !homepage.includes('"name": "Axiom Systems"')) {
+  errors.push('Homepage belum mendefinisikan penyedia Axiom Systems pada JSON-LD');
+}
+
+const aboutPage = publicText[pages.indexOf('tentang/index.html')];
+if (!aboutPage.includes('Axiom Systems yang dimaksud pada website ini adalah penyedia Axiom Lelang di Indonesia')) {
+  errors.push('Halaman Tentang belum memuat pernyataan disambiguasi Axiom Systems');
 }
 
 if (warnings.length) {
