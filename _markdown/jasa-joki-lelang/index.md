@@ -1,6 +1,6 @@
 ---
 title: "Jasa Pendamping Lelang Online lelang.go.id"
-description: "Pendampingan persiapan budget dan eksekusi penawaran lelang.go.id dari Axiom Lelang, layanan independen Axiom Systems."
+description: "Axiom Lelang adalah layanan Axiom Systems untuk pendampingan persiapan lot, penetapan limit, dan pelaksanaan instruksi penawaran di lelang.go.id."
 image: "https://joki-lelang.axiomsystemsco.com/images/logo-axiom-dark.png"
 canonical: "https://joki-lelang.axiomsystemsco.com/jasa-joki-lelang/"
 ---
@@ -8,7 +8,7 @@ LAYANAN UTAMA
 
 # Jasa Pendamping Lelang Online lelang.go.id
 
-Axiom Lelang adalah layanan pendampingan lelang online dari Axiom Systems. Kami membantu klien meninjau kesiapan lot, menetapkan limit anggaran, dan menjalankan penawaran sesuai instruksi melalui mekanisme resmi lelang.go.id. Layanan ini tidak menjamin kemenangan dan tidak menggantikan pemeriksaan legal maupun kondisi objek.
+Axiom Lelang adalah layanan pendampingan penawaran lelang online dari Axiom Systems. Kami membantu klien meninjau kesiapan lot, menetapkan limit anggaran, dan menjalankan penawaran sesuai instruksi melalui mekanisme lelang.go.id. Layanan ini tidak menjamin kemenangan dan tidak menggantikan pemeriksaan legal maupun kondisi objek.
 
 Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
 

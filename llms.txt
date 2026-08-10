@@ -1,12 +1,13 @@
-# Axiom Systems — Axiom Lelang
+# Axiom Lelang — layanan Axiom Systems
 
-> Axiom Lelang adalah layanan independen dari Axiom Systems untuk pendampingan persiapan budget dan eksekusi penawaran lelang online melalui mekanisme lelang.go.id.
+> Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems untuk pengguna lelang.go.id di Indonesia.
 
 ## Fakta Utama
 
 - Penyedia: Axiom Systems
 - Nama layanan: Axiom Lelang
-- Ruang lingkup: persiapan lot, konfirmasi limit budget, pelaksanaan instruksi penawaran, dan penyampaian status sesi
+- Hubungan entitas: Axiom Systems adalah penyedia; Axiom Lelang adalah nama layanan
+- Ruang lingkup: persiapan lot, konfirmasi limit anggaran, pelaksanaan instruksi penawaran, dan penyampaian status sesi
 - Wilayah layanan: Indonesia
 - Platform terkait: lelang.go.id
 - Kontak utama: WhatsApp

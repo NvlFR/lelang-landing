@@ -23,8 +23,8 @@ const pages = [
     type: 'service',
     eyebrow: 'LAYANAN UTAMA',
     title: 'Jasa Pendamping Lelang Online lelang.go.id',
-    description: 'Pendampingan persiapan budget dan eksekusi penawaran lelang.go.id dari Axiom Lelang, layanan independen Axiom Systems.',
-    answer: 'Axiom Lelang adalah layanan pendampingan lelang online dari Axiom Systems. Kami membantu klien meninjau kesiapan lot, menetapkan limit anggaran, dan menjalankan penawaran sesuai instruksi melalui mekanisme resmi lelang.go.id. Layanan ini tidak menjamin kemenangan dan tidak menggantikan pemeriksaan legal maupun kondisi objek.',
+    description: 'Axiom Lelang adalah layanan Axiom Systems untuk pendampingan persiapan lot, penetapan limit, dan pelaksanaan instruksi penawaran di lelang.go.id.',
+    answer: 'Axiom Lelang adalah layanan pendampingan penawaran lelang online dari Axiom Systems. Kami membantu klien meninjau kesiapan lot, menetapkan limit anggaran, dan menjalankan penawaran sesuai instruksi melalui mekanisme lelang.go.id. Layanan ini tidak menjamin kemenangan dan tidak menggantikan pemeriksaan legal maupun kondisi objek.',
     sections: [
       ['Apa yang dikerjakan pendamping lelang?', `<p>Pendamping lelang membantu peserta menjaga proses tetap terencana ketika mengikuti lelang online. Ruang lingkup Axiom Lelang berfokus pada persiapan eksekusi, disiplin limit anggaran, pemantauan sesi, dan penyampaian hasil setelah sesi berakhir.</p><div class="content-card-grid"><div class="content-card"><h3>Sebelum lelang</h3><p>Memeriksa tautan lot, waktu pelaksanaan, jenis penawaran, dan batas anggaran yang diberikan klien.</p></div><div class="content-card"><h3>Saat lelang</h3><p>Menjalankan penawaran berdasarkan instruksi dan tidak melampaui limit yang telah disepakati.</p></div><div class="content-card"><h3>Setelah lelang</h3><p>Menyampaikan status dan catatan penawaran yang tersedia dari sesi resmi.</p></div><div class="content-card"><h3>Tetap tanggung jawab peserta</h3><p>Verifikasi dokumen, kondisi aset, pajak, biaya, dan keputusan nilai ekonomis lot.</p></div></div>`],
       ['Kapan layanan ini relevan?', `<ul><li>Anda sudah memiliki akun dan lot target di lelang.go.id.</li><li>Anda ingin menetapkan batas maksimal sebelum sesi dimulai.</li><li>Anda tidak dapat memantau sesi secara penuh.</li><li>Anda membutuhkan pendampingan teknis tanpa janji pasti menang.</li></ul><p>Jika Anda belum memahami mekanisme dasarnya, mulai dari <a href="/panduan/cara-ikut-lelang-online">panduan cara ikut lelang online</a> dan <a href="/cara-kerja">alur kerja Axiom Lelang</a>.</p>`],
@@ -60,11 +60,12 @@ const pages = [
   },
   {
     file: 'tentang/index.html', path: '/tentang/', type: 'about', eyebrow: 'TENTANG KAMI',
-    title: 'Tentang Axiom Systems dan Axiom Lelang',
-    description: 'Kenali Axiom Systems, penyedia layanan Axiom Lelang untuk pendampingan dan eksekusi penawaran lelang online.',
-    answer: 'Axiom Systems adalah penyedia independen di balik Axiom Lelang, layanan pendampingan dan eksekusi penawaran lelang online. Fokus layanan adalah membantu klien menjaga disiplin anggaran dan menjalankan instruksi secara terstruktur pada platform lelang.go.id, tanpa menjanjikan kemenangan atau mengatasnamakan instansi pemerintah.',
+    title: 'Tentang Axiom Lelang dan Axiom Systems',
+    description: 'Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems untuk pengguna lelang.go.id di Indonesia.',
+    answer: 'Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems untuk pengguna lelang.go.id di Indonesia. Layanan membantu klien menyiapkan lot, menetapkan limit, dan menjalankan instruksi secara terstruktur melalui mekanisme platform.',
     sections: [
-      ['Identitas layanan', `<p><strong>Axiom Systems</strong> adalah entitas penyedia layanan. <strong>Axiom Lelang</strong> adalah nama layanan yang digunakan untuk pendampingan lelang online. Penyebutan ini diterapkan konsisten pada halaman, metadata, dan structured data website.</p>`],
+      ['Identitas layanan', `<p><strong>Axiom Lelang</strong> adalah nama layanan pendampingan penawaran lelang online. <strong>Axiom Systems</strong> adalah penyedia layanan yang mengelola website, konsultasi, dan pelaksanaan instruksi klien.</p><p>Axiom Systems yang dimaksud pada website ini adalah penyedia Axiom Lelang di Indonesia dan tidak berafiliasi dengan perusahaan lain yang menggunakan nama serupa.</p>`],
+      ['Informasi resmi Axiom Lelang', `<ul><li><strong>Nama layanan:</strong> Axiom Lelang.</li><li><strong>Penyedia:</strong> Axiom Systems.</li><li><strong>Wilayah layanan:</strong> Indonesia.</li><li><strong>Website:</strong> joki-lelang.axiomsystemsco.com.</li><li><strong>Kanal konsultasi:</strong> WhatsApp yang ditautkan dari halaman kontak resmi.</li></ul>`],
       ['Prinsip kerja', `<div class="content-card-grid"><div class="content-card"><h3>Disiplin budget</h3><p>Instruksi limit ditetapkan sebelum eksekusi.</p></div><div class="content-card"><h3>Transparansi</h3><p>Ruang lingkup, biaya, dan batas layanan dijelaskan di awal.</p></div><div class="content-card"><h3>Independen</h3><p>Tidak berafiliasi dengan DJKN, KPKNL, atau Kementerian Keuangan.</p></div><div class="content-card"><h3>Tanpa jaminan hasil</h3><p>Persaingan dan ketentuan resmi tetap menentukan hasil.</p></div></div>`],
       ['Informasi publik dan kepercayaan', `<p>Website ini hanya menampilkan klaim yang dapat dijelaskan melalui proses layanan atau sumber resmi. Case study dan testimoni tidak dipublikasikan tanpa data serta izin yang memadai.</p>`]
     ], related: [['/jasa-joki-lelang','Layanan Axiom Lelang'], ['/case-study','Standar case study'], ['/kontak','Kanal kontak resmi']],
@@ -258,6 +259,22 @@ function schema(page) {
     }
   ];
 
+  if (page.type === 'about') {
+    graph.unshift(
+      {
+        '@type': 'Organization', '@id': `${site}/#organization`, name: 'Axiom Systems', url: `${site}/tentang/`,
+        description: 'Penyedia Axiom Lelang, layanan pendampingan penawaran lelang online untuk pengguna lelang.go.id di Indonesia.',
+        logo: { '@type': 'ImageObject', url: `${site}/images/logo-axiom-dark.png` },
+        brand: { '@id': `${site}/#brand` },
+        contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', telephone: '+62-851-9925-6640', url: `${site}/kontak/`, areaServed: 'ID', availableLanguage: 'id' }
+      },
+      {
+        '@type': 'Brand', '@id': `${site}/#brand`, name: 'Axiom Lelang', url: `${site}/`,
+        logo: `${site}/images/logo-axiom-dark.png`, description: 'Layanan pendampingan penawaran lelang online dari Axiom Systems.'
+      }
+    );
+  }
+
   if (page.type === 'service') {
     graph.push({
       '@type': 'Service', '@id': `${url}#service`, name: 'Pendampingan dan Eksekusi Penawaran Lelang Online',
@@ -309,7 +326,7 @@ function render(page) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(page.title)} | Axiom Systems</title>
+  <title>${escapeHtml(page.title)} | Axiom Lelang</title>
   <meta name="description" content="${escapeHtml(page.description)}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="Axiom Systems">
@@ -319,7 +336,7 @@ function render(page) {
   <link rel="apple-touch-icon" href="/images/logo-axiom-dark.png">
   <meta property="og:type" content="${page.type === 'article' ? 'article' : 'website'}">
   <meta property="og:url" content="${url}">
-  <meta property="og:site_name" content="Axiom Systems">
+  <meta property="og:site_name" content="Axiom Lelang">
   <meta property="og:title" content="${escapeHtml(page.title)}">
   <meta property="og:description" content="${escapeHtml(page.description)}">
   <meta property="og:image" content="${site}/images/logo-axiom-dark.png">
