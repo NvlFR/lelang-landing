@@ -6,10 +6,10 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const site = 'https://joki-lelang.axiomsystemsco.com';
 const sitemap = await readFile(resolve(root, 'sitemap.xml'), 'utf8');
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-const routesConfig = JSON.parse(await readFile(resolve(root, '_routes.json'), 'utf8'));
-const source = await readFile(resolve(root, 'functions/_middleware.js'), 'utf8');
+const workerConfig = JSON.parse(await readFile(resolve(root, 'wrangler.jsonc'), 'utf8'));
+const source = await readFile(resolve(root, 'worker.js'), 'utf8');
 const moduleUrl = `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;
-const { onRequest } = await import(moduleUrl);
+const { handleRequest } = await import(moduleUrl);
 
 const errors = [];
 
@@ -26,12 +26,15 @@ function matchesRoute(pattern, route) {
 }
 
 async function assetFetch(input) {
-  const path = new URL(input.toString()).pathname;
+  const url = new URL(input instanceof Request ? input.url : input.toString());
+  const path = url.pathname.endsWith('/')
+    ? `${url.pathname}index.html`
+    : url.pathname;
   try {
     const body = await readFile(resolve(root, path.slice(1)), 'utf8');
     return new Response(body, {
       headers: {
-        'Content-Type': 'text/markdown',
+        'Content-Type': path.endsWith('.md') ? 'text/markdown' : 'text/html; charset=utf-8',
         'X-Robots-Tag': 'noindex, nofollow'
       }
     });
@@ -40,23 +43,22 @@ async function assetFetch(input) {
   }
 }
 
-function context(url, accept, method = 'GET') {
-  return {
-    request: new Request(url, { method, headers: accept ? { Accept: accept } : {} }),
-    env: { ASSETS: { fetch: assetFetch } },
-    next: () => new Response('<!DOCTYPE html><html></html>', {
-      headers: { 'Content-Type': 'text/html; charset=utf-8' }
-    })
-  };
+function execute(url, accept, method = 'GET') {
+  const request = new Request(url, { method, headers: accept ? { Accept: accept } : {} });
+  return handleRequest(request, { ASSETS: { fetch: assetFetch } });
 }
+
+const workerRoutes = workerConfig.assets?.run_worker_first ?? [];
+if (workerConfig.main !== 'worker.js') errors.push('wrangler.jsonc harus memakai worker.js sebagai entrypoint');
+if (workerConfig.assets?.binding !== 'ASSETS') errors.push('wrangler.jsonc harus menyediakan binding ASSETS');
 
 for (const url of urls) {
   const route = routeFromUrl(url);
   const assetPath = markdownAssetForRoute(route);
   let markdown;
 
-  if (!routesConfig.include.some((pattern) => matchesRoute(pattern, route))) {
-    errors.push(`${route}: belum tercakup oleh _routes.json`);
+  if (!workerRoutes.some((pattern) => matchesRoute(pattern, route))) {
+    errors.push(`${route}: belum tercakup oleh assets.run_worker_first`);
   }
 
   try {
@@ -70,7 +72,7 @@ for (const url of urls) {
   if (!markdown.includes(`canonical: "${site}${route}"`)) errors.push(`${assetPath}: canonical tidak sesuai`);
   if (!/^#\s+.+$/m.test(markdown)) errors.push(`${assetPath}: H1 Markdown tidak ditemukan`);
 
-  const markdownResponse = await onRequest(context(url, 'text/html, text/markdown;q=0.9'));
+  const markdownResponse = await execute(url, 'text/html, text/markdown;q=0.9');
   if (!markdownResponse.headers.get('Content-Type')?.startsWith('text/markdown')) {
     errors.push(`${route}: respons agent bukan text/markdown`);
   }
@@ -85,27 +87,27 @@ for (const url of urls) {
   }
 }
 
-const htmlResponse = await onRequest(context(`${site}/faq/`, 'text/html'));
+const htmlResponse = await execute(`${site}/faq/`, 'text/html');
 if (!htmlResponse.headers.get('Content-Type')?.startsWith('text/html')) {
   errors.push('Request browser default tidak menghasilkan HTML');
 }
 
-const rejectedMarkdown = await onRequest(context(`${site}/faq/`, 'text/markdown;q=0, text/html'));
+const rejectedMarkdown = await execute(`${site}/faq/`, 'text/markdown;q=0, text/html');
 if (!rejectedMarkdown.headers.get('Content-Type')?.startsWith('text/html')) {
   errors.push('Accept text/markdown;q=0 tidak kembali ke HTML');
 }
 
-const headResponse = await onRequest(context(`${site}/faq/`, 'text/markdown', 'HEAD'));
+const headResponse = await execute(`${site}/faq/`, 'text/markdown', 'HEAD');
 if (headResponse.status !== 200 || await headResponse.text() !== '') {
   errors.push('HEAD Markdown harus 200 tanpa response body');
 }
 
-const directMirror = await onRequest(context(`${site}/_markdown/faq/index.md`, 'text/markdown'));
+const directMirror = await execute(`${site}/_markdown/faq/index.md`, 'text/markdown');
 if (directMirror.status !== 404) {
   errors.push('Aset mirror Markdown harus ditutup dari akses URL langsung');
 }
-if (!routesConfig.include.includes('/_markdown/*')) {
-  errors.push('_routes.json harus menjalankan middleware untuk memblokir akses langsung /_markdown/*');
+if (!workerRoutes.includes('/_markdown/*')) {
+  errors.push('assets.run_worker_first harus memblokir akses langsung /_markdown/*');
 }
 
 if (errors.length) {
