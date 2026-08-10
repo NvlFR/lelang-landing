@@ -18,6 +18,11 @@ const MARKDOWN_ASSETS = new Map([
   ['/panduan/apa-yang-terjadi-saat-lelang-ditutup/', '/_markdown/panduan/apa-yang-terjadi-saat-lelang-ditutup/index.md']
 ]);
 
+const HOMEPAGE_DISCOVERY_LINKS = [
+  '</llms.txt>; rel="describedby"; type="text/plain"',
+  '</sitemap.xml>; rel="describedby"; type="application/xml"'
+].join(', ');
+
 function acceptsMarkdown(value) {
   if (!value) return false;
 
@@ -54,6 +59,19 @@ function estimateTokens(markdown) {
   return Math.ceil(markdown.length / 4);
 }
 
+function withHomepageDiscoveryLinks(response, pathname) {
+  if (pathname !== '/') return response;
+
+  const headers = new Headers(response.headers);
+  headers.set('Link', HOMEPAGE_DISCOVERY_LINKS);
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers
+  });
+}
+
 export async function handleRequest(request, env) {
   const requestUrl = new URL(request.url);
 
@@ -69,7 +87,10 @@ export async function handleRequest(request, env) {
   }
 
   if (!['GET', 'HEAD'].includes(request.method)) return env.ASSETS.fetch(request);
-  if (!acceptsMarkdown(request.headers.get('Accept'))) return env.ASSETS.fetch(request);
+  if (!acceptsMarkdown(request.headers.get('Accept'))) {
+    const assetResponse = await env.ASSETS.fetch(request);
+    return withHomepageDiscoveryLinks(assetResponse, requestUrl.pathname);
+  }
 
   const assetPath = MARKDOWN_ASSETS.get(normalizePagePath(requestUrl.pathname));
   if (!assetPath) return env.ASSETS.fetch(request);
@@ -91,10 +112,12 @@ export async function handleRequest(request, env) {
   headers.delete('X-Robots-Tag');
   withAcceptVary(headers);
 
-  return new Response(request.method === 'HEAD' ? null : markdown, {
+  const response = new Response(request.method === 'HEAD' ? null : markdown, {
     status: 200,
     headers
   });
+
+  return withHomepageDiscoveryLinks(response, requestUrl.pathname);
 }
 
 export default {

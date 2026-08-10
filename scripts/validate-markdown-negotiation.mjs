@@ -98,6 +98,21 @@ if (!htmlResponse.headers.get('Content-Type')?.startsWith('text/html')) {
   errors.push('Request browser default tidak menghasilkan HTML');
 }
 
+for (const accept of ['text/html', 'text/markdown']) {
+  const homepageResponse = await execute(`${site}/`, accept);
+  const link = homepageResponse.headers.get('Link') ?? '';
+  if (!link.includes('</llms.txt>; rel="describedby"; type="text/plain"')) {
+    errors.push(`Homepage ${accept}: Link header ke llms.txt tidak ditemukan`);
+  }
+  if (!link.includes('</sitemap.xml>; rel="describedby"; type="application/xml"')) {
+    errors.push(`Homepage ${accept}: Link header ke sitemap.xml tidak ditemukan`);
+  }
+}
+
+if ((await execute(`${site}/faq/`, 'text/html')).headers.has('Link')) {
+  errors.push('Link discovery header hanya boleh ditambahkan pada homepage');
+}
+
 const rejectedMarkdown = await execute(`${site}/faq/`, 'text/markdown;q=0, text/html');
 if (!rejectedMarkdown.headers.get('Content-Type')?.startsWith('text/html')) {
   errors.push('Accept text/markdown;q=0 tidak kembali ke HTML');
