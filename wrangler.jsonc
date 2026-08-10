@@ -6,25 +6,15 @@
     "directory": ".",
     "binding": "ASSETS",
     "run_worker_first": [
-      "/",
-      "/jasa-joki-lelang",
-      "/jasa-joki-lelang/",
-      "/cara-kerja",
-      "/cara-kerja/",
-      "/biaya",
-      "/biaya/",
-      "/faq",
-      "/faq/",
-      "/tentang",
-      "/tentang/",
-      "/kontak",
-      "/kontak/",
-      "/case-study",
-      "/case-study/",
-      "/bukti-kemenangan",
-      "/bukti-kemenangan/",
-      "/panduan/*",
-      "/_markdown/*"
+      "/*",
+      "!/styles.css",
+      "!/script.js",
+      "!/images/*",
+      "!/bukti-kemenangan/*.svg",
+      "!/robots.txt",
+      "!/sitemap.xml",
+      "!/llms.txt",
+      "!/google1ca1a578c086138d.html"
     ]
   }
 }

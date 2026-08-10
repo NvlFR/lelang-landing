@@ -25,6 +25,12 @@ function matchesRoute(pattern, route) {
   return pattern.endsWith('*') ? route.startsWith(pattern.slice(0, -1)) : pattern === route;
 }
 
+function runsWorkerFirst(patterns, route) {
+  const positiveMatch = patterns.some((pattern) => !pattern.startsWith('!') && matchesRoute(pattern, route));
+  const negativeMatch = patterns.some((pattern) => pattern.startsWith('!') && matchesRoute(pattern.slice(1), route));
+  return positiveMatch && !negativeMatch;
+}
+
 async function assetFetch(input) {
   const url = new URL(input instanceof Request ? input.url : input.toString());
   const path = url.pathname.endsWith('/')
@@ -57,7 +63,7 @@ for (const url of urls) {
   const assetPath = markdownAssetForRoute(route);
   let markdown;
 
-  if (!workerRoutes.some((pattern) => matchesRoute(pattern, route))) {
+  if (!runsWorkerFirst(workerRoutes, route)) {
     errors.push(`${route}: belum tercakup oleh assets.run_worker_first`);
   }
 
@@ -106,7 +112,7 @@ const directMirror = await execute(`${site}/_markdown/faq/index.md`, 'text/markd
 if (directMirror.status !== 404) {
   errors.push('Aset mirror Markdown harus ditutup dari akses URL langsung');
 }
-if (!workerRoutes.includes('/_markdown/*')) {
+if (!runsWorkerFirst(workerRoutes, '/_markdown/faq/index.md')) {
   errors.push('assets.run_worker_first harus memblokir akses langsung /_markdown/*');
 }
 
