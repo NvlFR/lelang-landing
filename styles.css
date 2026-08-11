@@ -1791,7 +1791,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1180px) {
   .navbar {
     background: rgba(11, 12, 14, 0.95) !important;
     backdrop-filter: blur(28px) !important;

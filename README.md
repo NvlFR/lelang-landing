@@ -46,10 +46,12 @@ lelang-landing/
 
 ```bash
 node scripts/generate-pages.mjs
+# Opsional: generate satu halaman tanpa menulis ulang halaman lain
+PAGE_PATH=/berita/ node scripts/generate-pages.mjs
 node scripts/generate-markdown.mjs
 node scripts/validate-site.mjs
 node scripts/validate-markdown-negotiation.mjs
-npx html-validate 404.html index.html faq/index.html jasa-joki-lelang/index.html cara-kerja/index.html biaya/index.html tentang/index.html kontak/index.html case-study/index.html bukti-kemenangan/index.html berita/*/index.html panduan/*/index.html
+npx html-validate 404.html index.html faq/index.html jasa-joki-lelang/index.html cara-kerja/index.html biaya/index.html tentang/index.html kontak/index.html case-study/index.html bukti-kemenangan/index.html berita/index.html berita/*/index.html panduan/*/index.html
 npx wrangler dev
 ```
 
