@@ -8,9 +8,9 @@ BIAYA LAYANAN
 
 # Biaya Pendampingan Lelang Axiom Lelang
 
-Biaya pendampingan Axiom Lelang diberikan setelah tim meninjau tautan lot, jadwal, jenis penawaran, dan ruang lingkup bantuan yang diperlukan. Estimasi serta ketentuan pembayaran dikonfirmasi sebelum layanan dimulai. Biaya layanan Axiom Systems terpisah dari uang jaminan, pelunasan, pajak, dan biaya resmi lelang.
+Biaya pendampingan Axiom Lelang diberikan setelah tim meninjau tautan lot, jadwal, jenis penawaran, dan ruang lingkup bantuan yang diperlukan. Estimasi serta ketentuan pembayaran dikonfirmasi sebelum layanan dimulai. Biaya layanan Axiom Systems Co terpisah dari uang jaminan, pelunasan, pajak, dan biaya resmi lelang.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Apa yang memengaruhi biaya?
 

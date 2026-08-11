@@ -1,12 +1,16 @@
-# Axiom Lelang — layanan Axiom Systems
+# Axiom Lelang — layanan Axiom Systems Co
 
-> Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems untuk pengguna lelang.go.id di Indonesia.
+> Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems Co untuk pengguna lelang.go.id di Indonesia.
 
 ## Fakta Utama
 
-- Penyedia: Axiom Systems
+- Penyedia: Axiom Systems Co
 - Nama layanan: Axiom Lelang
-- Hubungan entitas: Axiom Systems adalah penyedia; Axiom Lelang adalah nama layanan
+- Hubungan entitas: Axiom Systems Co adalah penyedia; Axiom Lelang adalah nama layanan
+- Website perusahaan: https://axiomsystemsco.com
+- Website layanan: https://joki-lelang.axiomsystemsco.com
+- GitHub resmi: https://github.com/axiomsystemsco
+- Email perusahaan: hello@axiomsystemsco.com
 - Ruang lingkup: persiapan lot, konfirmasi limit anggaran, pelaksanaan instruksi penawaran, dan penyampaian status sesi
 - Wilayah layanan: Indonesia
 - Platform terkait: lelang.go.id
@@ -22,7 +26,7 @@
 - [Cara Kerja](https://joki-lelang.axiomsystemsco.com/cara-kerja/)
 - [Biaya](https://joki-lelang.axiomsystemsco.com/biaya/)
 - [FAQ](https://joki-lelang.axiomsystemsco.com/faq/)
-- [Tentang Axiom Systems](https://joki-lelang.axiomsystemsco.com/tentang/)
+- [Tentang Axiom Lelang dan Axiom Systems Co](https://joki-lelang.axiomsystemsco.com/tentang/)
 - [Kontak](https://joki-lelang.axiomsystemsco.com/kontak/)
 - [Case Study](https://joki-lelang.axiomsystemsco.com/case-study/)
 - [Bukti Kemenangan](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/)
@@ -37,6 +41,8 @@
 - [Cara Menghindari Overbid](https://joki-lelang.axiomsystemsco.com/panduan/cara-menghindari-overbid/)
 - [Apa Itu Uang Jaminan Penawaran Lelang?](https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-uang-jaminan-lelang/)
 - [Apa yang Terjadi Saat Lelang Ditutup?](https://joki-lelang.axiomsystemsco.com/panduan/apa-yang-terjadi-saat-lelang-ditutup/)
+- [Risiko Mengikuti Lelang Online](https://joki-lelang.axiomsystemsco.com/panduan/risiko-mengikuti-lelang-online/)
+- [Apakah Joki Lelang Menjamin Menang?](https://joki-lelang.axiomsystemsco.com/panduan/apakah-joki-lelang-menjamin-menang/)
 
 ## Berita Layanan Lelang
 
@@ -45,6 +51,6 @@
 
 ## Catatan Penggunaan
 
-Informasi prosedural harus dibaca bersama pengumuman lot dan sumber resmi DJKN. Axiom Systems tidak mengelola uang jaminan, tidak menentukan pemenang, dan tidak menggantikan pemeriksaan hukum atau kondisi objek.
+Informasi prosedural harus dibaca bersama pengumuman lot dan sumber resmi DJKN. Axiom Systems Co tidak mengelola uang jaminan, tidak menentukan pemenang, dan tidak menggantikan pemeriksaan hukum atau kondisi objek.
 
 Terakhir diperbarui: 11 Agustus 2026

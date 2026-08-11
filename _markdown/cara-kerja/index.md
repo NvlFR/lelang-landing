@@ -10,7 +10,7 @@ PROSES LAYANAN
 
 Pendampingan Axiom Lelang berjalan dalam empat tahap: konsultasi lot, penetapan limit anggaran, persiapan dan pelaksanaan penawaran, lalu penyampaian hasil sesi. Klien tetap memegang keputusan atas lot dan budget, sedangkan pelaksanaan mengikuti mekanisme yang tersedia pada lelang.go.id.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Empat tahap pendampingan
 
@@ -33,7 +33,7 @@ Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
 
 ## Baca selanjutnya
 
-[Ruang lingkup layanan](https://joki-lelang.axiomsystemsco.com/jasa-joki-lelang/) [Cara penentuan biaya](https://joki-lelang.axiomsystemsco.com/biaya/) [Hubungi Axiom Systems](https://joki-lelang.axiomsystemsco.com/kontak/)
+[Ruang lingkup layanan](https://joki-lelang.axiomsystemsco.com/jasa-joki-lelang/) [Cara penentuan biaya](https://joki-lelang.axiomsystemsco.com/biaya/) [Hubungi Axiom Systems Co](https://joki-lelang.axiomsystemsco.com/kontak/)
 
 ## Konsultasikan alur untuk lot Anda
 

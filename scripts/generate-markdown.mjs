@@ -2,9 +2,10 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { siteConfig } from './site-config.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const site = 'https://joki-lelang.axiomsystemsco.com';
+const site = siteConfig.auction.url;
 const filter = resolve(root, 'scripts/markdown-filter.lua');
 
 const pages = [
@@ -26,7 +27,9 @@ const pages = [
   ['/panduan/cara-menentukan-budget-lelang/', 'panduan/cara-menentukan-budget-lelang/index.html'],
   ['/panduan/cara-menghindari-overbid/', 'panduan/cara-menghindari-overbid/index.html'],
   ['/panduan/apa-itu-uang-jaminan-lelang/', 'panduan/apa-itu-uang-jaminan-lelang/index.html'],
-  ['/panduan/apa-yang-terjadi-saat-lelang-ditutup/', 'panduan/apa-yang-terjadi-saat-lelang-ditutup/index.html']
+  ['/panduan/apa-yang-terjadi-saat-lelang-ditutup/', 'panduan/apa-yang-terjadi-saat-lelang-ditutup/index.html'],
+  ['/panduan/risiko-mengikuti-lelang-online/', 'panduan/risiko-mengikuti-lelang-online/index.html'],
+  ['/panduan/apakah-joki-lelang-menjamin-menang/', 'panduan/apakah-joki-lelang-menjamin-menang/index.html']
 ];
 
 function decodeEntities(value) {

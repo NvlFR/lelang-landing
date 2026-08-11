@@ -13,7 +13,9 @@ const pages = [
   'panduan/cara-daftar-lelang-go-id/index.html', 'panduan/apa-itu-open-bidding/index.html',
   'panduan/cara-menentukan-budget-lelang/index.html', 'panduan/cara-menghindari-overbid/index.html',
   'panduan/apa-itu-uang-jaminan-lelang/index.html',
-  'panduan/apa-yang-terjadi-saat-lelang-ditutup/index.html'
+  'panduan/apa-yang-terjadi-saat-lelang-ditutup/index.html',
+  'panduan/risiko-mengikuti-lelang-online/index.html',
+  'panduan/apakah-joki-lelang-menjamin-menang/index.html'
 ];
 
 const errors = [];
@@ -87,9 +89,16 @@ for (const url of sitemapUrls) {
   if (!canonicals.has(url)) errors.push(`Sitemap memuat URL tanpa halaman terdaftar ${url}`);
 }
 
+const assetsIgnore = await readFile(resolve(root, '.assetsignore'), 'utf8');
+const ignoredAssetPatterns = new Set(assetsIgnore.split(/\r?\n/));
+for (const privateAssetPattern of ['docs/**', 'scripts/**', 'PRD*.md', 'worker.js', 'wrangler.jsonc', '.env*', '.dev.vars*']) {
+  if (!ignoredAssetPatterns.has(privateAssetPattern)) {
+    errors.push(`.assetsignore: pola internal belum dilindungi: ${privateAssetPattern}`);
+  }
+}
+
 const publicText = await Promise.all(pages.map((file) => readFile(resolve(root, file), 'utf8')));
 const forbiddenClaims = [
-  /Axiom Systems Co/i,
   /100% legal/i,
   /SSL\/TLS 256/i,
   /LATENCY:\s*\d+/i,
@@ -112,13 +121,28 @@ if (!homepage.includes('<title>Axiom Lelang | Pendampingan Penawaran Lelang Onli
 if (!homepage.includes('"@type": "Brand"') || !homepage.includes('"name": "Axiom Lelang"')) {
   errors.push('Homepage belum mendefinisikan Brand Axiom Lelang pada JSON-LD');
 }
-if (!homepage.includes('"@type": "Organization"') || !homepage.includes('"name": "Axiom Systems"')) {
-  errors.push('Homepage belum mendefinisikan penyedia Axiom Systems pada JSON-LD');
+if (!homepage.includes('"@type": "Organization"') || !homepage.includes('"name": "Axiom Systems Co"')) {
+  errors.push('Homepage belum mendefinisikan penyedia Axiom Systems Co pada JSON-LD');
+}
+if (!homepage.includes('"@id": "https://axiomsystemsco.com/#organization"')) {
+  errors.push('Homepage belum memakai ID entitas resmi Axiom Systems Co');
+}
+
+for (const [index, html] of publicText.entries()) {
+  if (!html.includes('https://axiomsystemsco.com')) {
+    errors.push(`${pages[index]}: belum menautkan website resmi Axiom Systems Co`);
+  }
+  if (!html.includes('https://github.com/axiomsystemsco')) {
+    errors.push(`${pages[index]}: belum menautkan GitHub resmi Axiom Systems Co`);
+  }
+  if (/Axiom Systems(?! Co)/i.test(html)) {
+    errors.push(`${pages[index]}: masih memakai nama operator yang tidak lengkap`);
+  }
 }
 
 const aboutPage = publicText[pages.indexOf('tentang/index.html')];
-if (!aboutPage.includes('Axiom Systems yang dimaksud pada website ini adalah penyedia Axiom Lelang di Indonesia')) {
-  errors.push('Halaman Tentang belum memuat pernyataan disambiguasi Axiom Systems');
+if (!aboutPage.includes('Axiom Systems Co yang dimaksud pada website ini adalah penyedia Axiom Lelang di Indonesia')) {
+  errors.push('Halaman Tentang belum memuat pernyataan disambiguasi Axiom Systems Co');
 }
 
 if (warnings.length) {

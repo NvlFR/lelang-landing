@@ -10,7 +10,7 @@ PERENCANAAN ANGGARAN
 
 Budget lelang yang aman bukan hanya harga penawaran. Hitung nilai wajar objek, biaya resmi lelang, pajak, balik nama, perbaikan, pengosongan, biaya pembiayaan, dan cadangan risiko. Setelah itu tetapkan limit penawaran tertulis sebelum sesi dan jangan menaikkannya hanya karena persaingan.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Rumus sederhana limit penawaran
 

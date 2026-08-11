@@ -1,6 +1,6 @@
 ---
 title: "Jasa Pendamping Lelang Online lelang.go.id"
-description: "Axiom Lelang adalah layanan Axiom Systems untuk pendampingan persiapan lot, penetapan limit, dan pelaksanaan instruksi penawaran di lelang.go.id."
+description: "Axiom Lelang adalah layanan Axiom Systems Co untuk pendampingan persiapan lot, penetapan limit, dan pelaksanaan instruksi penawaran di lelang.go.id."
 image: "https://joki-lelang.axiomsystemsco.com/images/logo-axiom-dark.png"
 canonical: "https://joki-lelang.axiomsystemsco.com/jasa-joki-lelang/"
 ---
@@ -8,9 +8,9 @@ LAYANAN UTAMA
 
 # Jasa Pendamping Lelang Online lelang.go.id
 
-Axiom Lelang adalah layanan pendampingan penawaran lelang online dari Axiom Systems. Kami membantu klien meninjau kesiapan lot, menetapkan limit anggaran, dan menjalankan penawaran sesuai instruksi melalui mekanisme lelang.go.id. Layanan ini tidak menjamin kemenangan dan tidak menggantikan pemeriksaan legal maupun kondisi objek.
+Axiom Lelang adalah layanan pendampingan penawaran lelang online dari Axiom Systems Co. Kami membantu klien meninjau kesiapan lot, menetapkan limit anggaran, dan menjalankan penawaran sesuai instruksi melalui mekanisme lelang.go.id. Layanan ini tidak menjamin kemenangan dan tidak menggantikan pemeriksaan legal maupun kondisi objek.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Apa yang dikerjakan pendamping lelang?
 
@@ -43,7 +43,7 @@ Jika Anda belum memahami mekanisme dasarnya, mulai dari [panduan cara ikut lelan
 
 ## Batas layanan yang perlu dipahami
 
-**Axiom Systems bukan bagian dari DJKN atau KPKNL.** Kami tidak menentukan pemenang, tidak mengubah mekanisme resmi, dan tidak dapat menjamin penawaran berhasil. Harga akhir tetap dipengaruhi penawaran peserta lain dan ketentuan pada pengumuman lot.
+**Axiom Systems Co bukan bagian dari DJKN atau KPKNL.** Kami tidak menentukan pemenang, tidak mengubah mekanisme resmi, dan tidak dapat menjamin penawaran berhasil. Harga akhir tetap dipengaruhi penawaran peserta lain dan ketentuan pada pengumuman lot.
 
 ## Baca selanjutnya
 

@@ -10,7 +10,7 @@ MANAJEMEN RISIKO
 
 Cara paling efektif menghindari overbid adalah menentukan limit penawaran sebelum lelang dimulai dan memperlakukannya sebagai batas mutlak. Limit harus memperhitungkan seluruh biaya setelah menang, bukan hanya harga lot. Ketika harga melewati batas, berhenti menawar meskipun selisih kenaikannya terlihat kecil.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Mengapa overbid terjadi?
 

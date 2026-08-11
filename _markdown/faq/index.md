@@ -1,6 +1,6 @@
 ---
 title: "FAQ Pendampingan Lelang Online"
-description: "Jawaban tentang ruang lingkup, keamanan akun, uang jaminan, biaya, limit budget, dan batas layanan Axiom Lelang dari Axiom Systems."
+description: "Jawaban tentang ruang lingkup, keamanan akun, uang jaminan, biaya, limit budget, dan batas layanan Axiom Lelang dari Axiom Systems Co."
 image: "https://joki-lelang.axiomsystemsco.com/images/logo-axiom-dark.png"
 canonical: "https://joki-lelang.axiomsystemsco.com/faq/"
 ---
@@ -12,7 +12,7 @@ Jawaban langsung tentang identitas penyedia, keamanan akun, Uang Jaminan Lelang 
 
 ## Apakah Axiom Lelang bagian dari DJKN atau KPKNL?
 
-**Tidak.** Axiom Lelang adalah layanan independen dari Axiom Systems dan bukan bagian dari DJKN, KPKNL, atau Kementerian Keuangan. Penawaran tetap dilakukan melalui mekanisme yang tersedia pada `lelang.go.id`. Kami tidak mengondisikan pemenang dan tidak memiliki kewenangan atas hasil lelang.
+**Tidak.** Axiom Lelang adalah layanan independen dari Axiom Systems Co dan bukan bagian dari DJKN, KPKNL, atau Kementerian Keuangan. Penawaran tetap dilakukan melalui mekanisme yang tersedia pada `lelang.go.id`. Kami tidak mengondisikan pemenang dan tidak memiliki kewenangan atas hasil lelang.
 
 ## Bagaimana keamanan akun lelang.go.id saya?
 
@@ -20,7 +20,7 @@ Jangan mengirim OTP atau kata sandi melalui konsultasi awal. Kebutuhan akses, ba
 
 ## Bagaimana jika penawaran saya kalah?
 
-Menurut FAQ DJKN, uang jaminan peserta yang tidak disahkan sebagai pembeli dikembalikan seluruhnya sesuai ketentuan, sedangkan biaya transaksi bank dapat menjadi tanggungan peserta. Axiom Systems tidak menerima, menyimpan, atau menjamin pengembalian UJL. Biaya pendampingan dibahas terpisah sebelum layanan dimulai.
+Menurut FAQ DJKN, uang jaminan peserta yang tidak disahkan sebagai pembeli dikembalikan seluruhnya sesuai ketentuan, sedangkan biaya transaksi bank dapat menjadi tanggungan peserta. Axiom Systems Co tidak menerima, menyimpan, atau menjamin pengembalian UJL. Biaya pendampingan dibahas terpisah sebelum layanan dimulai.
 
 ## Apakah waktu penawaran menjamin kemenangan?
 

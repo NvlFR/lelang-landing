@@ -10,7 +10,7 @@ BUKTI DAN TRANSPARANSI
 
 Halaman case study Axiom Lelang mendokumentasikan proses, keputusan budget, hasil sesi, dan pembelajaran secara transparan. Dokumentasi hasil penawaran yang telah tersedia dapat dilihat pada halaman bukti kemenangan Axiom Lelang.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Apa yang akan dicatat?
 
@@ -30,7 +30,7 @@ Hasil menang tidak otomatis berarti keputusan ekonominya baik, sedangkan hasil k
 
 ## Baca selanjutnya
 
-[Lihat bukti kemenangan](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/) [Cara kerja layanan](https://joki-lelang.axiomsystemsco.com/cara-kerja/) [Tentang Axiom Systems](https://joki-lelang.axiomsystemsco.com/tentang/)
+[Lihat bukti kemenangan](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/) [Cara kerja layanan](https://joki-lelang.axiomsystemsco.com/cara-kerja/) [Tentang Axiom Systems Co](https://joki-lelang.axiomsystemsco.com/tentang/)
 
 ## Diskusikan lot Anda
 

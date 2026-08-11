@@ -10,7 +10,7 @@ HASIL AXIOM LELANG
 
 Galeri ini berisi dokumentasi hasil dan aktivitas penawaran dari sesi lelang online yang telah ditangani Axiom Lelang. Gambar ditampilkan sebagai bukti proses nyata, bukan simulasi atau contoh fiktif.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Dokumentasi hasil penawaran
 

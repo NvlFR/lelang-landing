@@ -1,21 +1,38 @@
+# Repository metadata and local tooling must never become public assets.
 .git
-.github
-.wrangler
-site-gladia.io
-
+.git/**
 .gitignore
-.htmlvalidate.json
-.assetsignore
-wrangler.jsonc
-worker.js
-
-functions
+.github
+.github/**
+.wrangler
+.wrangler/**
+node_modules
+node_modules/**
+docs
+docs/**
 scripts
+scripts/**
 
+# Worker source/config is deployed by Wrangler, not served as a static file.
+worker.js
+wrangler.jsonc
+.assetsignore
+.htmlvalidate.json
+
+# Internal planning and source documents.
+README.md
 BLUEPRINT_AI_SEARCH.md
 COPYWRITING.md
 PLAN.md
-PRD.md
-README.md
-collor.md
 plan.md
+PRD*.md
+collor.md
+
+# Local secrets, logs, and package metadata.
+.env*
+.dev.vars*
+*.log
+package.json
+package-lock.json
+pnpm-lock.yaml
+yarn.lock

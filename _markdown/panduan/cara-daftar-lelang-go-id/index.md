@@ -10,7 +10,7 @@ PANDUAN AKUN
 
 Untuk mendaftar di lelang.go.id, calon peserta membuat akun menggunakan identitas dan kontak yang aktif, lalu melengkapi data persyaratan pada profil. Data identitas, NPWP apabila dipersyaratkan, dan rekening bank perlu diisi dengan benar karena digunakan dalam administrasi keikutsertaan serta pengembalian uang jaminan.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Persiapan sebelum mendaftar
 

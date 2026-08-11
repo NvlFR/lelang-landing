@@ -1,6 +1,6 @@
 ---
 title: "Axiom Lelang — Pendampingan Penawaran Lelang Online"
-description: "Axiom Lelang adalah layanan pendampingan penawaran lelang online dari Axiom Systems untuk persiapan lot, penetapan limit, dan pelaksanaan instruksi di lelang.go.id."
+description: "Axiom Lelang adalah layanan pendampingan penawaran lelang online dari Axiom Systems Co untuk persiapan lot, penetapan limit, dan pelaksanaan instruksi di lelang.go.id."
 image: "https://joki-lelang.axiomsystemsco.com/images/logo-axiom-dark.png"
 canonical: "https://joki-lelang.axiomsystemsco.com/"
 ---
@@ -8,7 +8,7 @@ PENDAMPINGAN PENAWARAN · LELANG.GO.ID
 
 # Pendampingan Penawaran Lelang Online Terarah, Tenang, Sesuai Limit Anda
 
-**Axiom Lelang** adalah layanan pendampingan penawaran lelang online dari **Axiom Systems**. Kami membantu meninjau lot, menetapkan limit, dan menjalankan instruksi penawaran melalui mekanisme resmi **lelang.go.id**.
+**Axiom Lelang** adalah layanan pendampingan penawaran lelang online dari **Axiom Systems Co**. Kami membantu meninjau lot, menetapkan limit, dan menjalankan instruksi penawaran melalui mekanisme resmi **lelang.go.id**.
 
 [Hubungi via WhatsApp](https://wa.me/6285199256640?text=Halo%20Axiom%20Lelang,%20saya%20ingin%20konsultasi%20joki%20lelang%20untuk%20lot%20lelang.go.id) [Pelajari Cara Kerja ↓](https://joki-lelang.axiomsystemsco.com/#cara-kerja)
 
@@ -174,7 +174,7 @@ MEKANISME PLATFORM
 
 ### Mengikuti Mekanisme Resmi
 
-Penawaran dilakukan melalui mekanisme yang tersedia pada lelang.go.id. Axiom Systems tidak memiliki kewenangan atas sistem atau hasil lelang.
+Penawaran dilakukan melalui mekanisme yang tersedia pada lelang.go.id. Axiom Systems Co tidak memiliki kewenangan atas sistem atau hasil lelang.
 
 PROSEDUR AKSES
 
@@ -249,7 +249,7 @@ Jangan mengirim OTP atau kata sandi melalui konsultasi awal. Kebutuhan akses, ba
 
 ## Bagaimana jika penawaran saya kalah?
 
-Menurut FAQ DJKN, uang jaminan peserta yang tidak disahkan sebagai pembeli dikembalikan seluruhnya sesuai ketentuan, sementara biaya transaksi bank dapat menjadi tanggungan peserta. Axiom Systems tidak mengelola atau menjamin proses pengembalian tersebut.
+Menurut FAQ DJKN, uang jaminan peserta yang tidak disahkan sebagai pembeli dikembalikan seluruhnya sesuai ketentuan, sementara biaya transaksi bank dapat menjadi tanggungan peserta. Axiom Systems Co tidak mengelola atau menjamin proses pengembalian tersebut.
 
 ## Apakah waktu penawaran menjamin kemenangan?
 
@@ -265,7 +265,7 @@ Biaya layanan dibicarakan secara transparan di awal konsultasi berdasarkan lot l
 
 ## Apakah Axiom Lelang bagian dari DJKN atau KPKNL?
 
-Tidak. Axiom Lelang adalah layanan independen dari Axiom Systems, bukan bagian dari DJKN, KPKNL, atau Kementerian Keuangan. Penawaran tetap mengikuti mekanisme yang tersedia pada lelang.go.id.
+Tidak. Axiom Lelang adalah layanan independen dari Axiom Systems Co, bukan bagian dari DJKN, KPKNL, atau Kementerian Keuangan. Penawaran tetap mengikuti mekanisme yang tersedia pada lelang.go.id.
 
 ------------------------------------------------------------------------
 
@@ -275,7 +275,7 @@ PUSAT PANDUAN LELANG
 
 Panduan berbasis sumber resmi untuk membantu peserta memahami istilah, persyaratan, budget, dan risiko lelang online.
 
-[Apa itu lelang.go.id?Fungsi platform dan informasi lot →](https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-lelang-go-id/) [Cara ikut lelang onlineLangkah dari akun sampai hasil →](https://joki-lelang.axiomsystemsco.com/panduan/cara-ikut-lelang-online/) [Apa itu open bidding?Metode dan perbedaannya →](https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-open-bidding/) [Menentukan budget lelangHitung limit dan biaya total →](https://joki-lelang.axiomsystemsco.com/panduan/cara-menentukan-budget-lelang/) [Cara menghindari overbidAturan berhenti saat sesi →](https://joki-lelang.axiomsystemsco.com/panduan/cara-menghindari-overbid/) [Apa itu uang jaminan?Setoran, pengembalian, dan risiko →](https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-uang-jaminan-lelang/)
+[Apa itu lelang.go.id?Fungsi platform dan informasi lot →](https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-lelang-go-id/) [Cara ikut lelang onlineLangkah dari akun sampai hasil →](https://joki-lelang.axiomsystemsco.com/panduan/cara-ikut-lelang-online/) [Apa itu open bidding?Metode dan perbedaannya →](https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-open-bidding/) [Menentukan budget lelangHitung limit dan biaya total →](https://joki-lelang.axiomsystemsco.com/panduan/cara-menentukan-budget-lelang/) [Cara menghindari overbidAturan berhenti saat sesi →](https://joki-lelang.axiomsystemsco.com/panduan/cara-menghindari-overbid/) [Apa itu uang jaminan?Setoran, pengembalian, dan risiko →](https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-uang-jaminan-lelang/) [Risiko lelang onlineObjek, biaya, akun, dan kewajiban →](https://joki-lelang.axiomsystemsco.com/panduan/risiko-mengikuti-lelang-online/) [Apakah pendamping menjamin menang?Faktor hasil dan batas layanan →](https://joki-lelang.axiomsystemsco.com/panduan/apakah-joki-lelang-menjamin-menang/)
 
 ------------------------------------------------------------------------
 

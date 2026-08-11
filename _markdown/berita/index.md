@@ -10,7 +10,7 @@ BERITA DAN UPDATE
 
 Halaman Berita Axiom Lelang merangkum maintenance, gangguan, dan pembaruan layanan yang relevan bagi peserta lelang. Setiap artikel menyertakan sumber resmi dan membedakan fakta pengumuman dari langkah persiapan yang dapat dilakukan peserta.
 
-Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Update terbaru
 
