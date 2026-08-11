@@ -38,8 +38,12 @@
 - [Apa Itu Uang Jaminan Penawaran Lelang?](https://joki-lelang.axiomsystemsco.com/panduan/apa-itu-uang-jaminan-lelang/)
 - [Apa yang Terjadi Saat Lelang Ditutup?](https://joki-lelang.axiomsystemsco.com/panduan/apa-yang-terjadi-saat-lelang-ditutup/)
 
+## Berita Layanan Lelang
+
+- [Gangguan SSO DJKN Selesai 11 Agustus 2026](https://joki-lelang.axiomsystemsco.com/berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/)
+
 ## Catatan Penggunaan
 
 Informasi prosedural harus dibaca bersama pengumuman lot dan sumber resmi DJKN. Axiom Systems tidak mengelola uang jaminan, tidak menentukan pemenang, dan tidak menggantikan pemeriksaan hukum atau kondisi objek.
 
-Terakhir diperbarui: 10 Agustus 2026
+Terakhir diperbarui: 11 Agustus 2026

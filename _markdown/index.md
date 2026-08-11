@@ -279,6 +279,16 @@ Panduan berbasis sumber resmi untuk membantu peserta memahami istilah, persyarat
 
 ------------------------------------------------------------------------
 
+BERITA LAYANAN LELANG
+
+## Update Gangguan dan Maintenance DJKN
+
+Ringkasan berbasis pengumuman resmi untuk membantu peserta membedakan gangguan layanan, maintenance terjadwal, dan status pemulihannya.
+
+[Gangguan SSO DJKN selesai 11 Agustus 2026Risalah Lelang kembali dapat digunakan →](https://joki-lelang.axiomsystemsco.com/berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/)
+
+------------------------------------------------------------------------
+
 ## Siap Menyiapkan Lot Lelang Berikutnya?
 
 Kirim tautan lot untuk mendiskusikan jadwal, limit budget, ruang lingkup pendampingan, dan biaya sebelum sesi.

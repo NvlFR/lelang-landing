@@ -13,7 +13,12 @@ const officialSources = {
   register: 'https://www.djkn.kemenkeu.go.id/kanwil-papuamaluku/baca-artikel/18470/Cara-Mendaftar-dan-Mengikuti-Lelang.html',
   tips: 'https://www.djkn.kemenkeu.go.id/artikel/baca/14929/10-TIP-JITU-DALAM-MEMBELI-BARANG-SITAAN-BANK.html',
   ujl: 'https://www.djkn.kemenkeu.go.id/kpknl-banjarmasin/baca-artikel/17210/Pengembalian-Uang-Jaminan-Bagi-Peserta-Lelang-yang-dinyatakan-Kalah.html',
-  regulation: 'https://www.djkn.kemenkeu.go.id/peraturan/baca/486/Peraturan-Menteri-Keuangan-Nomor-122-Tahun-2023.html'
+  regulation: 'https://www.djkn.kemenkeu.go.id/peraturan/baca/486/Peraturan-Menteri-Keuangan-Nomor-122-Tahun-2023.html',
+  maintenance: 'https://www.djkn.kemenkeu.go.id/maintenance-aplikasi',
+  ssoDisruption: 'https://www.djkn.kemenkeu.go.id/maintenance-aplikasi/detail/647.html',
+  ssoResolved: 'https://www.djkn.kemenkeu.go.id/maintenance-aplikasi/detail/650.html',
+  portalMaintenance: 'https://www.djkn.kemenkeu.go.id/maintenance-aplikasi/detail/643.html',
+  portalResolved: 'https://www.djkn.kemenkeu.go.id/maintenance-aplikasi/detail/645.html'
 };
 
 const pages = [
@@ -222,6 +227,35 @@ const pages = [
     ], sources: [[officialSources.faq,'DJKN — FAQ Pemenang, Pelunasan, dan Uang Jaminan'], [officialSources.tips,'DJKN — Tips Membeli Barang melalui Lelang']],
     related: [['/panduan/apa-itu-uang-jaminan-lelang','Pengembalian uang jaminan'], ['/panduan/cara-ikut-lelang-online','Alur lengkap peserta'], ['/case-study','Pembelajaran hasil sesi']],
     cta: 'Butuh pendampingan sesi berikutnya?', waText: 'Halo Axiom Lelang, saya ingin konsultasi untuk sesi lelang berikutnya.'
+  },
+  {
+    file: 'berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/index.html',
+    path: '/berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/',
+    type: 'article',
+    schemaType: 'NewsArticle',
+    articleSection: 'Berita Lelang',
+    eyebrow: 'UPDATE LAYANAN DJKN',
+    title: 'Gangguan SSO DJKN Selesai 11 Agustus 2026',
+    description: 'DJKN menyatakan gangguan SSO yang berdampak pada Risalah Lelang telah selesai. Simak status layanan dan langkah aman bagi peserta lelang.',
+    answer: 'DJKN menyatakan pada 11 Agustus 2026 bahwa gangguan SSO DJKN telah selesai dan aplikasi yang memakai SSO, termasuk Risalah Lelang, sudah dapat digunakan kembali. Gangguan sebelumnya diumumkan pada 10 Agustus 2026. Pengumuman tersebut tidak menyebut bahwa proses penawaran di Portal Lelang Indonesia ikut terganggu.',
+    published: '2026-08-11',
+    modified: '2026-08-11',
+    sections: [
+      ['Status terbaru: layanan SSO sudah kembali', `<p>Dalam pembaruan resminya, Layanan Operasional TIK DJKN menyatakan SSO DJKN sudah dapat digunakan kembali pada Selasa, 11 Agustus 2026. Aplikasi yang disebut terdampak sebelumnya adalah Executive Dashboard, FocusPN, dan Risalah Lelang.</p><div class="notice-card"><p><strong>Status resmi terakhir: selesai.</strong> Pengguna tetap perlu memeriksa halaman maintenance DJKN apabila menemukan kendala baru karena status layanan dapat berubah setelah artikel ini diterbitkan.</p></div>`],
+      ['Gangguan SSO berbeda dari maintenance Portal Lelang', `<p>Gangguan pada 10 Agustus diumumkan sebagai gangguan SSO DJKN yang berdampak pada aplikasi yang menggunakan mekanisme login tersebut. DJKN tidak menyatakan dalam pengumuman itu bahwa fitur penawaran pada Portal Lelang Indonesia ikut mengalami gangguan.</p><p>Portal Lelang Indonesia memang menjalani maintenance terjadwal yang berbeda pada Kamis, 6 Agustus 2026 pukul 20.00–23.59 WIB. DJKN kemudian mengumumkan bahwa maintenance tersebut telah selesai dan portal dapat digunakan kembali.</p>`],
+      ['Apa yang perlu dilakukan peserta lelang?', `<ol><li><strong>Periksa status resmi.</strong> Buka halaman maintenance DJKN dan halaman lot sebelum mengambil kesimpulan mengenai gangguan.</li><li><strong>Simpan bukti kendala.</strong> Catat waktu, URL, pesan kesalahan, dan tangkapan layar jika akses bermasalah menjelang batas penawaran.</li><li><strong>Pastikan status penawaran.</strong> Jangan menganggap penawaran tercatat hanya karena tombol sudah ditekan; periksa konfirmasi yang tersedia pada platform.</li><li><strong>Gunakan kanal resmi.</strong> Untuk persoalan sistem atau status lelang, hubungi kanal DJKN/KPKNL yang tercantum pada pengumuman lot.</li><li><strong>Jangan pindah ke jalur tidak resmi.</strong> Maintenance bukan alasan untuk mengirim uang, OTP, atau kata sandi kepada pihak yang menghubungi melalui akun pribadi.</li></ol>`],
+      ['Lot Anda berlangsung dalam waktu dekat?', `<p>Siapkan tautan lot, jadwal, metode penawaran, status uang jaminan, dan limit maksimal sebelum sesi. Axiom Lelang dapat membantu meninjau kesiapan eksekusi dan menyusun langkah cadangan operasional berdasarkan informasi resmi yang tersedia.</p>`]
+    ],
+    sources: [
+      [officialSources.ssoResolved,'DJKN — SSO DJKN sudah dapat digunakan kembali, 11 Agustus 2026'],
+      [officialSources.ssoDisruption,'DJKN — Gangguan SSO DJKN, 10 Agustus 2026'],
+      [officialSources.portalMaintenance,'DJKN — Maintenance Portal Lelang Indonesia, 6 Agustus 2026'],
+      [officialSources.portalResolved,'DJKN — Maintenance Portal Lelang Indonesia selesai, 6 Agustus 2026'],
+      [officialSources.maintenance,'DJKN — Informasi Maintenance Aplikasi']
+    ],
+    related: [['/panduan/cara-ikut-lelang-online','Cara ikut lelang online'], ['/cara-kerja','Cara kerja pendampingan'], ['/kontak','Kontak Axiom Lelang']],
+    cta: 'Punya lot dengan jadwal dekat?',
+    waText: 'Halo Axiom Lelang, saya punya lot dengan jadwal dekat dan ingin meninjau kesiapan sesinya.'
   }
 ];
 
@@ -235,6 +269,9 @@ function slugify(value) {
 
 function schema(page) {
   const url = `${site}${page.path}`;
+  const modified = page.modified ?? updated;
+  const published = page.published ?? updated;
+  const section = page.path.startsWith('/panduan/') ? ['Panduan', `${site}/#panduan`] : page.path.startsWith('/berita/') ? ['Berita', `${site}/#berita`] : null;
   const organization = { '@id': `${site}/#organization` };
   const graph = [
     {
@@ -246,15 +283,15 @@ function schema(page) {
       isPartOf: { '@id': `${site}/#website` },
       about: organization,
       inLanguage: 'id-ID',
-      dateModified: updated
+      dateModified: modified
     },
     {
       '@type': 'BreadcrumbList',
       '@id': `${url}#breadcrumb`,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Beranda', item: `${site}/` },
-        ...(page.path.startsWith('/panduan/') ? [{ '@type': 'ListItem', position: 2, name: 'Panduan', item: `${site}/#panduan` }] : []),
-        { '@type': 'ListItem', position: page.path.startsWith('/panduan/') ? 3 : 2, name: page.title, item: url }
+        ...(section ? [{ '@type': 'ListItem', position: 2, name: section[0], item: section[1] }] : []),
+        { '@type': 'ListItem', position: section ? 3 : 2, name: page.title, item: url }
       ]
     }
   ];
@@ -285,8 +322,8 @@ function schema(page) {
 
   if (page.type === 'article') {
     graph.push({
-      '@type': 'Article', '@id': `${url}#article`, headline: page.title, description: page.description,
-      datePublished: updated, dateModified: updated, inLanguage: 'id-ID', mainEntityOfPage: { '@id': `${url}#webpage` },
+      '@type': page.schemaType ?? 'Article', '@id': `${url}#article`, headline: page.title, description: page.description,
+      datePublished: published, dateModified: modified, ...(page.articleSection ? { articleSection: page.articleSection } : {}), inLanguage: 'id-ID', mainEntityOfPage: { '@id': `${url}#webpage` },
       author: { '@type': 'Organization', name: 'Tim Editorial Axiom Systems', '@id': `${site}/#organization` },
       publisher: organization, image: `${site}/images/logo-axiom-dark.png`
     });
@@ -310,13 +347,17 @@ function schema(page) {
 
 function render(page) {
   const url = `${site}${page.path}`;
+  const modified = page.modified ?? updated;
+  const formattedModified = new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${modified}T00:00:00Z`));
   const headings = page.sections.map(([heading]) => [slugify(heading), heading]);
   if (page.sources) headings.push(['sumber-resmi', 'Sumber resmi']);
   headings.push(['panduan-terkait', 'Baca selanjutnya']);
   const message = `${wa}?text=${encodeURIComponent(page.waText)}`;
   const breadcrumb = page.path.startsWith('/panduan/')
     ? `<a href="/">Beranda</a><span>/</span><a href="/#panduan">Panduan</a><span>/</span><span>${escapeHtml(page.title)}</span>`
-    : `<a href="/">Beranda</a><span>/</span><span>${escapeHtml(page.title)}</span>`;
+    : page.path.startsWith('/berita/')
+      ? `<a href="/">Beranda</a><span>/</span><a href="/#berita">Berita</a><span>/</span><span>${escapeHtml(page.title)}</span>`
+      : `<a href="/">Beranda</a><span>/</span><span>${escapeHtml(page.title)}</span>`;
   const body = page.sections.map(([heading, html]) => `<section id="${slugify(heading)}"><h2>${heading}</h2>${html}</section>`).join('\n');
   const sources = page.sources ? `<section id="sumber-resmi"><h2>Sumber resmi</h2><p>Informasi prosedural pada halaman ini diringkas dari sumber pemerintah berikut. Selalu periksa kembali pengumuman lot dan ketentuan terbaru.</p><ul class="source-list">${page.sources.map(([href,label]) => `<li><a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a></li>`).join('')}</ul></section>` : '';
   const related = `<section id="panduan-terkait"><h2>Baca selanjutnya</h2><div class="article-hub-grid">${page.related.map(([href,label]) => `<a class="article-link-card" href="${href}">${label}<span>Pelajari topik terkait →</span></a>`).join('')}</div></section>`;
@@ -341,7 +382,7 @@ function render(page) {
   <meta property="og:description" content="${escapeHtml(page.description)}">
   <meta property="og:image" content="${site}/images/logo-axiom-dark.png">
   <meta property="og:locale" content="id_ID">
-  <meta name="twitter:card" content="summary_large_image">
+  ${page.schemaType === 'NewsArticle' ? `<meta property="article:published_time" content="${page.published ?? updated}">\n  <meta property="article:modified_time" content="${modified}">\n  ` : ''}<meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(page.title)}">
   <meta name="twitter:description" content="${escapeHtml(page.description)}">
   <meta name="twitter:image" content="${site}/images/logo-axiom-dark.png">
@@ -378,7 +419,7 @@ function render(page) {
         <div class="eyebrow"><span class="dot-active"></span>${page.eyebrow}</div>
         <h1 class="content-title">${page.title}</h1>
         <p class="answer-block">${page.answer}</p>
-        <div class="content-meta"><span>Diperbarui: 10 Agustus 2026</span><span>Ditinjau oleh Tim Editorial Axiom Systems</span></div>
+        <div class="content-meta"><span>Diperbarui: ${formattedModified}</span><span>Ditinjau oleh Tim Editorial Axiom Systems</span></div>
       </div>
     </header>
     <div class="container content-layout">
