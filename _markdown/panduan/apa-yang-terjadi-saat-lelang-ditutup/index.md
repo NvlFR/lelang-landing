@@ -10,7 +10,7 @@ SETELAH PENAWARAN
 
 Setelah periode penawaran ditutup, pejabat lelang menetapkan hasil sesuai metode dan ketentuan lot. Peserta perlu memeriksa status resmi pada akun atau pemberitahuan penyelenggara. Pembeli wajib menyelesaikan pembayaran dan administrasi sesuai tenggat, sedangkan uang jaminan peserta yang tidak menang dikembalikan berdasarkan ketentuan.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Jika ditetapkan sebagai pembeli
 

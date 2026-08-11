@@ -10,7 +10,7 @@ PANDUAN DASAR
 
 lelang.go.id adalah platform lelang yang digunakan Direktorat Jenderal Kekayaan Negara untuk menampilkan objek dan memfasilitasi proses lelang secara daring. Calon peserta perlu membuat akun, melengkapi persyaratan, memilih lot, menyetor uang jaminan sesuai pengumuman, lalu mengajukan penawaran dengan metode yang berlaku.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Apa fungsi lelang.go.id?
 

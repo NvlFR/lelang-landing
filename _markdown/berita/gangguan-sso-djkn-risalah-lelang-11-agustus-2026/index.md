@@ -10,7 +10,7 @@ UPDATE LAYANAN DJKN
 
 DJKN menyatakan pada 11 Agustus 2026 bahwa gangguan SSO DJKN telah selesai dan aplikasi yang memakai SSO, termasuk Risalah Lelang, sudah dapat digunakan kembali. Gangguan sebelumnya diumumkan pada 10 Agustus 2026. Pengumuman tersebut tidak menyebut bahwa proses penawaran di Portal Lelang Indonesia ikut terganggu.
 
-Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Status terbaru: layanan SSO sudah kembali
 

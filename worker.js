@@ -17,7 +17,9 @@ const MARKDOWN_ASSETS = new Map([
   ['/panduan/cara-menentukan-budget-lelang/', '/_markdown/panduan/cara-menentukan-budget-lelang/index.md'],
   ['/panduan/cara-menghindari-overbid/', '/_markdown/panduan/cara-menghindari-overbid/index.md'],
   ['/panduan/apa-itu-uang-jaminan-lelang/', '/_markdown/panduan/apa-itu-uang-jaminan-lelang/index.md'],
-  ['/panduan/apa-yang-terjadi-saat-lelang-ditutup/', '/_markdown/panduan/apa-yang-terjadi-saat-lelang-ditutup/index.md']
+  ['/panduan/apa-yang-terjadi-saat-lelang-ditutup/', '/_markdown/panduan/apa-yang-terjadi-saat-lelang-ditutup/index.md'],
+  ['/panduan/risiko-mengikuti-lelang-online/', '/_markdown/panduan/risiko-mengikuti-lelang-online/index.md'],
+  ['/panduan/apakah-joki-lelang-menjamin-menang/', '/_markdown/panduan/apakah-joki-lelang-menjamin-menang/index.md']
 ]);
 
 const HOMEPAGE_DISCOVERY_LINKS = [

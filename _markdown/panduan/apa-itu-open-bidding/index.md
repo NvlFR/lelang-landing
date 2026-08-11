@@ -10,7 +10,7 @@ METODE PENAWARAN
 
 Open bidding adalah metode penawaran ketika peserta dapat melihat nilai penawaran tertinggi selama sesi dan mengajukan penawaran yang lebih tinggi mengikuti kelipatan yang ditetapkan pejabat lelang. Berbeda dari closed bidding, nilai penawaran peserta pada open bidding terlihat oleh peserta lain secara real time.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Bagaimana open bidding bekerja?
 

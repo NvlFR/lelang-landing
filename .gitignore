@@ -1,5 +1,22 @@
 site-gladia.io
 
+# Internal product, growth, and operations documents live in the private
+# axiomsystemsco/axiom-lelang-internal repository.
+PRD.md
+PRD_Axiom_AI_Search_Entity_Growth.md
+BLUEPRINT_AI_SEARCH.md
+COPYWRITING.md
+PLAN.md
+plan.md
+collor.md
+docs/AUDIT.md
+docs/AUTHORITY_PLAN.md
+docs/CONTENT_PLAN.md
+docs/PROFILE_KIT.md
+docs/AI_SEARCH_READINESS.md
+docs/SEO_AI_VISIBILITY.md
+docs/DEPLOYMENT.md
+
 # wrangler files
 .wrangler
 .dev.vars*

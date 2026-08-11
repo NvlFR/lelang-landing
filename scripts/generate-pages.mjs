@@ -1,11 +1,13 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { siteConfig } from './site-config.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const site = 'https://joki-lelang.axiomsystemsco.com';
-const wa = 'https://wa.me/6285199256640';
-const updated = '2026-08-10';
+const site = siteConfig.auction.url;
+const wa = siteConfig.contact.whatsapp;
+const company = siteConfig.company;
+const updated = '2026-08-11';
 
 const officialSources = {
   faq: 'https://www.djkn.kemenkeu.go.id/faq/faq_detail/pelayanan-lelang/3',
@@ -28,12 +30,12 @@ const pages = [
     type: 'service',
     eyebrow: 'LAYANAN UTAMA',
     title: 'Jasa Pendamping Lelang Online lelang.go.id',
-    description: 'Axiom Lelang adalah layanan Axiom Systems untuk pendampingan persiapan lot, penetapan limit, dan pelaksanaan instruksi penawaran di lelang.go.id.',
-    answer: 'Axiom Lelang adalah layanan pendampingan penawaran lelang online dari Axiom Systems. Kami membantu klien meninjau kesiapan lot, menetapkan limit anggaran, dan menjalankan penawaran sesuai instruksi melalui mekanisme lelang.go.id. Layanan ini tidak menjamin kemenangan dan tidak menggantikan pemeriksaan legal maupun kondisi objek.',
+    description: 'Axiom Lelang adalah layanan Axiom Systems Co untuk pendampingan persiapan lot, penetapan limit, dan pelaksanaan instruksi penawaran di lelang.go.id.',
+    answer: 'Axiom Lelang adalah layanan pendampingan penawaran lelang online dari Axiom Systems Co. Kami membantu klien meninjau kesiapan lot, menetapkan limit anggaran, dan menjalankan penawaran sesuai instruksi melalui mekanisme lelang.go.id. Layanan ini tidak menjamin kemenangan dan tidak menggantikan pemeriksaan legal maupun kondisi objek.',
     sections: [
       ['Apa yang dikerjakan pendamping lelang?', `<p>Pendamping lelang membantu peserta menjaga proses tetap terencana ketika mengikuti lelang online. Ruang lingkup Axiom Lelang berfokus pada persiapan eksekusi, disiplin limit anggaran, pemantauan sesi, dan penyampaian hasil setelah sesi berakhir.</p><div class="content-card-grid"><div class="content-card"><h3>Sebelum lelang</h3><p>Memeriksa tautan lot, waktu pelaksanaan, jenis penawaran, dan batas anggaran yang diberikan klien.</p></div><div class="content-card"><h3>Saat lelang</h3><p>Menjalankan penawaran berdasarkan instruksi dan tidak melampaui limit yang telah disepakati.</p></div><div class="content-card"><h3>Setelah lelang</h3><p>Menyampaikan status dan catatan penawaran yang tersedia dari sesi resmi.</p></div><div class="content-card"><h3>Tetap tanggung jawab peserta</h3><p>Verifikasi dokumen, kondisi aset, pajak, biaya, dan keputusan nilai ekonomis lot.</p></div></div>`],
       ['Kapan layanan ini relevan?', `<ul><li>Anda sudah memiliki akun dan lot target di lelang.go.id.</li><li>Anda ingin menetapkan batas maksimal sebelum sesi dimulai.</li><li>Anda tidak dapat memantau sesi secara penuh.</li><li>Anda membutuhkan pendampingan teknis tanpa janji pasti menang.</li></ul><p>Jika Anda belum memahami mekanisme dasarnya, mulai dari <a href="/panduan/cara-ikut-lelang-online">panduan cara ikut lelang online</a> dan <a href="/cara-kerja">alur kerja Axiom Lelang</a>.</p>`],
-      ['Batas layanan yang perlu dipahami', `<div class="notice-card"><p><strong>Axiom Systems bukan bagian dari DJKN atau KPKNL.</strong> Kami tidak menentukan pemenang, tidak mengubah mekanisme resmi, dan tidak dapat menjamin penawaran berhasil. Harga akhir tetap dipengaruhi penawaran peserta lain dan ketentuan pada pengumuman lot.</p></div>`]
+      ['Batas layanan yang perlu dipahami', `<div class="notice-card"><p><strong>Axiom Systems Co bukan bagian dari DJKN atau KPKNL.</strong> Kami tidak menentukan pemenang, tidak mengubah mekanisme resmi, dan tidak dapat menjamin penawaran berhasil. Harga akhir tetap dipengaruhi penawaran peserta lain dan ketentuan pada pengumuman lot.</p></div>`]
     ],
     related: [['/cara-kerja','Pelajari cara kerja'], ['/biaya','Lihat penjelasan biaya'], ['/faq','Baca FAQ layanan']],
     cta: 'Kirim link lot lelang Anda',
@@ -48,14 +50,14 @@ const pages = [
       ['Empat tahap pendampingan', `<ol><li><strong>Kirim lot.</strong> Klien mengirim tautan lot dan waktu pelaksanaan.</li><li><strong>Tetapkan limit.</strong> Klien menentukan batas maksimal berdasarkan perhitungannya sendiri.</li><li><strong>Konfirmasi eksekusi.</strong> Ruang lingkup, biaya, dan instruksi dikonfirmasi sebelum sesi.</li><li><strong>Terima hasil.</strong> Status sesi dan informasi penawaran disampaikan setelah lelang berakhir.</li></ol>`],
       ['Informasi yang perlu disiapkan', `<ul><li>Tautan lot pada lelang.go.id.</li><li>Jadwal dan jenis penawaran yang tercantum.</li><li>Limit anggaran maksimal.</li><li>Status verifikasi peserta dan uang jaminan.</li><li>Instruksi yang telah disepakati sebelum sesi.</li></ul>`],
       ['Apa yang tidak dilakukan?', `<div class="notice-card"><p><strong>Tidak ada pengondisian pemenang.</strong> Axiom Lelang tidak memiliki kewenangan atas sistem, peserta lain, pejabat lelang, atau hasil penetapan pembeli. Kami juga tidak memberikan penilaian hukum atas dokumen dan objek lelang.</p></div>`]
-    ], related: [['/jasa-joki-lelang','Ruang lingkup layanan'], ['/biaya','Cara penentuan biaya'], ['/kontak','Hubungi Axiom Systems']],
+    ], related: [['/jasa-joki-lelang','Ruang lingkup layanan'], ['/biaya','Cara penentuan biaya'], ['/kontak','Hubungi Axiom Systems Co']],
     cta: 'Konsultasikan alur untuk lot Anda', waText: 'Halo Axiom Lelang, saya ingin konsultasi alur pendampingan untuk lot lelang saya.'
   },
   {
     file: 'biaya/index.html', path: '/biaya/', type: 'webpage', eyebrow: 'BIAYA LAYANAN',
     title: 'Biaya Pendampingan Lelang Axiom Lelang',
     description: 'Penjelasan komponen dan cara memperoleh estimasi biaya pendampingan lelang online dari Axiom Lelang.',
-    answer: 'Biaya pendampingan Axiom Lelang diberikan setelah tim meninjau tautan lot, jadwal, jenis penawaran, dan ruang lingkup bantuan yang diperlukan. Estimasi serta ketentuan pembayaran dikonfirmasi sebelum layanan dimulai. Biaya layanan Axiom Systems terpisah dari uang jaminan, pelunasan, pajak, dan biaya resmi lelang.',
+    answer: 'Biaya pendampingan Axiom Lelang diberikan setelah tim meninjau tautan lot, jadwal, jenis penawaran, dan ruang lingkup bantuan yang diperlukan. Estimasi serta ketentuan pembayaran dikonfirmasi sebelum layanan dimulai. Biaya layanan Axiom Systems Co terpisah dari uang jaminan, pelunasan, pajak, dan biaya resmi lelang.',
     sections: [
       ['Apa yang memengaruhi biaya?', `<table class="content-table"><thead><tr><th>Komponen</th><th>Pengaruh</th></tr></thead><tbody><tr><td data-label="Komponen">Jenis dan jadwal lot</td><td data-label="Pengaruh">Menentukan persiapan serta durasi pemantauan.</td></tr><tr><td data-label="Komponen">Metode penawaran</td><td data-label="Pengaruh">Open bidding dan closed bidding memiliki alur berbeda.</td></tr><tr><td data-label="Komponen">Ruang lingkup</td><td data-label="Pengaruh">Konsultasi saja berbeda dari pendampingan sampai sesi selesai.</td></tr><tr><td data-label="Komponen">Kompleksitas instruksi</td><td data-label="Pengaruh">Instruksi harus dapat dikonfirmasi dan dijalankan secara jelas.</td></tr></tbody></table>`],
       ['Biaya yang bukan bagian dari layanan', `<ul><li>Uang Jaminan Penawaran Lelang.</li><li>Pelunasan pokok lelang dan bea lelang.</li><li>Pajak, biaya balik nama, pemeriksaan aset, dan biaya bank.</li><li>Biaya lain yang tercantum pada pengumuman atau ketentuan lot.</li></ul>`],
@@ -65,20 +67,20 @@ const pages = [
   },
   {
     file: 'tentang/index.html', path: '/tentang/', type: 'about', eyebrow: 'TENTANG KAMI',
-    title: 'Tentang Axiom Lelang dan Axiom Systems',
-    description: 'Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems untuk pengguna lelang.go.id di Indonesia.',
-    answer: 'Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems untuk pengguna lelang.go.id di Indonesia. Layanan membantu klien menyiapkan lot, menetapkan limit, dan menjalankan instruksi secara terstruktur melalui mekanisme platform.',
+    title: 'Tentang Axiom Lelang dan Axiom Systems Co',
+    description: 'Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems Co untuk pengguna lelang.go.id di Indonesia.',
+    answer: 'Axiom Lelang adalah layanan pendampingan penawaran lelang online yang disediakan Axiom Systems Co untuk pengguna lelang.go.id di Indonesia. Layanan membantu klien menyiapkan lot, menetapkan limit, dan menjalankan instruksi secara terstruktur melalui mekanisme platform.',
     sections: [
-      ['Identitas layanan', `<p><strong>Axiom Lelang</strong> adalah nama layanan pendampingan penawaran lelang online. <strong>Axiom Systems</strong> adalah penyedia layanan yang mengelola website, konsultasi, dan pelaksanaan instruksi klien.</p><p>Axiom Systems yang dimaksud pada website ini adalah penyedia Axiom Lelang di Indonesia dan tidak berafiliasi dengan perusahaan lain yang menggunakan nama serupa.</p>`],
-      ['Informasi resmi Axiom Lelang', `<ul><li><strong>Nama layanan:</strong> Axiom Lelang.</li><li><strong>Penyedia:</strong> Axiom Systems.</li><li><strong>Wilayah layanan:</strong> Indonesia.</li><li><strong>Website:</strong> joki-lelang.axiomsystemsco.com.</li><li><strong>Kanal konsultasi:</strong> WhatsApp yang ditautkan dari halaman kontak resmi.</li></ul>`],
+      ['Identitas layanan', `<p><strong>Axiom Lelang</strong> adalah nama layanan pendampingan penawaran lelang online. <strong>Axiom Systems Co</strong> adalah penyedia layanan yang mengelola website, konsultasi, dan pelaksanaan instruksi klien.</p><p>Axiom Systems Co yang dimaksud pada website ini adalah penyedia Axiom Lelang di Indonesia dan tidak berafiliasi dengan perusahaan lain yang menggunakan nama serupa.</p>`],
+      ['Informasi resmi Axiom Lelang', `<ul><li><strong>Nama layanan:</strong> Axiom Lelang.</li><li><strong>Penyedia:</strong> Axiom Systems Co.</li><li><strong>Wilayah layanan:</strong> Indonesia.</li><li><strong>Website:</strong> joki-lelang.axiomsystemsco.com.</li><li><strong>Kanal konsultasi:</strong> WhatsApp yang ditautkan dari halaman kontak resmi.</li></ul>`],
       ['Prinsip kerja', `<div class="content-card-grid"><div class="content-card"><h3>Disiplin budget</h3><p>Instruksi limit ditetapkan sebelum eksekusi.</p></div><div class="content-card"><h3>Transparansi</h3><p>Ruang lingkup, biaya, dan batas layanan dijelaskan di awal.</p></div><div class="content-card"><h3>Independen</h3><p>Tidak berafiliasi dengan DJKN, KPKNL, atau Kementerian Keuangan.</p></div><div class="content-card"><h3>Tanpa jaminan hasil</h3><p>Persaingan dan ketentuan resmi tetap menentukan hasil.</p></div></div>`],
       ['Informasi publik dan kepercayaan', `<p>Website ini hanya menampilkan klaim yang dapat dijelaskan melalui proses layanan atau sumber resmi. Case study dan testimoni tidak dipublikasikan tanpa data serta izin yang memadai.</p>`]
     ], related: [['/jasa-joki-lelang','Layanan Axiom Lelang'], ['/case-study','Standar case study'], ['/kontak','Kanal kontak resmi']],
-    cta: 'Hubungi Axiom Systems', waText: 'Halo Axiom Systems, saya ingin bertanya tentang layanan Axiom Lelang.'
+    cta: 'Hubungi Axiom Systems Co', waText: 'Halo Axiom Systems Co, saya ingin bertanya tentang layanan Axiom Lelang.'
   },
   {
     file: 'kontak/index.html', path: '/kontak/', type: 'contact', eyebrow: 'KONTAK RESMI',
-    title: 'Kontak Axiom Lelang dari Axiom Systems',
+    title: 'Kontak Axiom Lelang dari Axiom Systems Co',
     description: 'Hubungi Axiom Lelang melalui WhatsApp untuk konsultasi lot, budget, proses, dan biaya pendampingan lelang.',
     answer: 'Kanal konsultasi resmi yang ditampilkan saat ini adalah WhatsApp Axiom Lelang. Agar peninjauan awal lebih cepat, sertakan tautan lot lelang.go.id, jadwal pelaksanaan, jenis aset, dan pertanyaan utama Anda. Jangan mengirim kata sandi, OTP, atau data sensitif melalui pesan awal.',
     sections: [
@@ -97,7 +99,7 @@ const pages = [
       ['Apa yang akan dicatat?', `<ul><li>Konteks lot tanpa membuka data sensitif.</li><li>Tujuan dan limit yang ditetapkan klien.</li><li>Metode penawaran yang berlaku.</li><li>Hasil sesi dan faktor yang memengaruhinya.</li><li>Pembelajaran yang dapat diterapkan peserta lain.</li></ul>`],
       ['Case study menang dan kalah tetap relevan', `<p>Hasil menang tidak otomatis berarti keputusan ekonominya baik, sedangkan hasil kalah dapat menunjukkan bahwa disiplin limit bekerja. Karena itu case study akan menilai proses dan keputusan, bukan sekadar status pemenang.</p>`],
       ['Dokumentasi yang tersedia', `<div class="notice-card"><p><strong>Bukti hasil sesi telah dipublikasikan.</strong> Lihat <a href="/bukti-kemenangan/">galeri bukti kemenangan Axiom Lelang</a> untuk meninjau tangkapan log penawaran dari sesi yang telah ditangani.</p></div>`]
-    ], related: [['/bukti-kemenangan','Lihat bukti kemenangan'], ['/cara-kerja','Cara kerja layanan'], ['/tentang','Tentang Axiom Systems']],
+    ], related: [['/bukti-kemenangan','Lihat bukti kemenangan'], ['/cara-kerja','Cara kerja layanan'], ['/tentang','Tentang Axiom Systems Co']],
     cta: 'Diskusikan lot Anda', waText: 'Halo Axiom Lelang, saya ingin mendiskusikan lot lelang saya.'
   },
   {
@@ -229,6 +231,36 @@ const pages = [
     cta: 'Butuh pendampingan sesi berikutnya?', waText: 'Halo Axiom Lelang, saya ingin konsultasi untuk sesi lelang berikutnya.'
   },
   {
+    file: 'panduan/risiko-mengikuti-lelang-online/index.html', path: '/panduan/risiko-mengikuti-lelang-online/', type: 'article', eyebrow: 'MANAJEMEN RISIKO',
+    title: 'Risiko Lelang Online dan Cara Menguranginya',
+    description: 'Kenali risiko kondisi objek, dokumen, biaya tambahan, overbid, wanprestasi, akun, dan gangguan teknis sebelum mengikuti lelang online.',
+    answer: 'Risiko mengikuti lelang online mencakup kondisi objek yang tidak sesuai perkiraan, dokumen atau penguasaan yang perlu diteliti, biaya tambahan setelah menang, overbid, kewajiban pelunasan, penipuan, dan kendala teknis. Risiko tersebut dapat dikurangi dengan membaca pengumuman, memeriksa objek, menghitung biaya total, menjaga keamanan akun, dan menetapkan limit sebelum menawar.',
+    sections: [
+      ['Apa saja risiko utama lelang online?', `<table class="content-table"><thead><tr><th>Risiko</th><th>Dampak</th><th>Mitigasi awal</th></tr></thead><tbody><tr><td data-label="Risiko">Kondisi objek</td><td data-label="Dampak">Nilai, kerusakan, atau penguasaan dapat berbeda dari asumsi peserta.</td><td data-label="Mitigasi awal">Periksa objek dan dokumen sebelum menawar.</td></tr><tr><td data-label="Risiko">Biaya total</td><td data-label="Dampak">Bea, pajak, balik nama, perbaikan, atau pengosongan menambah kebutuhan dana.</td><td data-label="Mitigasi awal">Hitung seluruh biaya dan cadangan risiko.</td></tr><tr><td data-label="Risiko">Overbid</td><td data-label="Dampak">Harga akhir melampaui nilai ekonomis yang direncanakan.</td><td data-label="Mitigasi awal">Tetapkan limit tertulis dan aturan berhenti.</td></tr><tr><td data-label="Risiko">Wanprestasi</td><td data-label="Dampak">Pembeli yang tidak memenuhi kewajiban dapat terkena konsekuensi sesuai ketentuan.</td><td data-label="Mitigasi awal">Pastikan dana pelunasan dan jadwal administrasi siap.</td></tr><tr><td data-label="Risiko">Akun dan penipuan</td><td data-label="Dampak">OTP, kata sandi, atau pembayaran dapat disalahgunakan.</td><td data-label="Mitigasi awal">Gunakan domain dan kanal resmi; jangan membagikan OTP.</td></tr><tr><td data-label="Risiko">Gangguan teknis</td><td data-label="Dampak">Akses atau konfirmasi penawaran dapat terkendala mendekati penutupan.</td><td data-label="Mitigasi awal">Siapkan lebih awal dan simpan bukti kendala.</td></tr></tbody></table>`],
+      ['Langkah sebelum memutuskan menawar', `<ol><li>Baca pengumuman dan seluruh dokumen lot.</li><li>Periksa objek, lokasi, kondisi, dan status penguasaan sejauh dapat dilakukan.</li><li>Hitung bea, pajak, balik nama, perbaikan, pengosongan, pembiayaan, dan cadangan.</li><li>Pastikan uang jaminan serta dana pelunasan tersedia sesuai tenggat.</li><li>Tetapkan target dan limit penawaran secara tertulis.</li><li>Gunakan akun, rekening, dan kanal resmi yang terverifikasi.</li><li>Siapkan koneksi, perangkat, waktu, dan catatan jika terjadi kendala.</li></ol>`],
+      ['Apa risiko setelah ditetapkan sebagai pembeli?', `<div class="notice-card"><p><strong>Kemenangan menimbulkan kewajiban, bukan hanya hak atas objek.</strong> Pembeli perlu melunasi pokok lelang dan kewajiban lain sesuai tenggat, lalu menjalankan proses administrasi serta penanganan objek. Jangan menawar apabila kesiapan dana dan risiko lanjutan belum dihitung.</p></div>`],
+      ['Kesalahan yang sering meningkatkan risiko', `<ul><li>Mengandalkan foto tanpa pemeriksaan yang memadai.</li><li>Menganggap nilai limit sebagai jaminan harga ekonomis.</li><li>Menghitung harga penawaran tanpa biaya lanjutan.</li><li>Menaikkan limit saat persaingan berlangsung.</li><li>Mengirim OTP, kata sandi, atau dana melalui kanal tidak resmi.</li><li>Menganggap pendamping dapat mengubah hasil atau aturan platform.</li></ul>`],
+      ['Pertanyaan singkat tentang risiko lelang', `<h3>Apakah semua risiko dapat dihilangkan?</h3><p>Tidak. Pemeriksaan dan perencanaan dapat mengurangi ketidakpastian, tetapi tidak menghapus seluruh risiko kondisi objek, persaingan, biaya, atau proses administrasi.</p><h3>Apakah harga limit berarti harga objek pasti murah?</h3><p>Tidak. Peserta tetap perlu menilai kondisi, biaya total, dan nilai ekonomis berdasarkan kebutuhannya sendiri.</p>`]
+    ], sources: [[officialSources.tips,'DJKN — Tips Membeli Barang melalui Lelang'], [officialSources.faq,'DJKN — FAQ Pelayanan Lelang'], [officialSources.regulation,'PMK 122 Tahun 2023']],
+    related: [['/panduan/cara-menentukan-budget-lelang','Menghitung budget dan limit'], ['/panduan/apa-itu-uang-jaminan-lelang','Memahami uang jaminan'], ['/panduan/cara-ikut-lelang-online','Langkah ikut lelang online']],
+    cta: 'Tinjau kesiapan lot sebelum menawar', waText: 'Halo Axiom Lelang, saya ingin meninjau risiko dan kesiapan lot sebelum mengikuti lelang.'
+  },
+  {
+    file: 'panduan/apakah-joki-lelang-menjamin-menang/index.html', path: '/panduan/apakah-joki-lelang-menjamin-menang/', type: 'article', eyebrow: 'BATAS LAYANAN',
+    title: 'Apakah Joki Lelang Menjamin Menang?',
+    description: 'Pendamping atau joki lelang tidak dapat menjamin kemenangan. Pelajari faktor penentu hasil, ruang lingkup bantuan, dan tanda janji yang perlu diwaspadai.',
+    answer: 'Tidak. Joki atau pendamping lelang tidak dapat menjamin kemenangan karena hasil ditentukan oleh metode lot, penawaran peserta lain, limit anggaran, kepatuhan persyaratan, dan mekanisme resmi. Layanan pendampingan yang wajar membantu persiapan serta pelaksanaan instruksi, tetapi tidak memiliki kewenangan mengatur peserta lain, pejabat lelang, sistem, atau penetapan pembeli.',
+    sections: [
+      ['Mengapa kemenangan tidak dapat dijamin?', `<ul><li>Jumlah dan strategi peserta lain tidak dapat dikendalikan.</li><li>Setiap peserta memiliki batas anggaran yang berbeda.</li><li>Metode open bidding dan closed bidding bekerja dengan mekanisme berbeda.</li><li>Status persyaratan, uang jaminan, dan penawaran tetap diproses pada sistem resmi.</li><li>Pejabat lelang menetapkan hasil berdasarkan ketentuan yang berlaku.</li></ul>`],
+      ['Apa yang dapat dan tidak dapat dilakukan pendamping?', `<table class="content-table"><thead><tr><th>Dapat dibantu</th><th>Tidak dapat dijanjikan</th></tr></thead><tbody><tr><td data-label="Dapat dibantu">Meninjau tautan, jadwal, dan metode lot.</td><td data-label="Tidak dapat dijanjikan">Mengatur jumlah atau penawaran peserta lain.</td></tr><tr><td data-label="Dapat dibantu">Mencatat limit yang ditentukan klien.</td><td data-label="Tidak dapat dijanjikan">Mengubah mekanisme platform.</td></tr><tr><td data-label="Dapat dibantu">Menyiapkan instruksi dan kesiapan sesi.</td><td data-label="Tidak dapat dijanjikan">Mempengaruhi pejabat lelang atau penetapan pembeli.</td></tr><tr><td data-label="Dapat dibantu">Menjalankan penawaran sesuai ruang lingkup yang disepakati.</td><td data-label="Tidak dapat dijanjikan">Menang dengan harga atau waktu tertentu.</td></tr><tr><td data-label="Dapat dibantu">Menyampaikan status sesi yang tersedia.</td><td data-label="Tidak dapat dijanjikan">Menghapus kewajiban pelunasan atau risiko objek.</td></tr></tbody></table>`],
+      ['Tanda janji kemenangan yang perlu diwaspadai', `<div class="notice-card"><p><strong>Waspadai klaim akses khusus, pengondisian pemenang, atau kemenangan pasti.</strong> Jangan mengirim dana ke rekening pribadi yang tidak sesuai instruksi resmi, dan jangan memberikan OTP atau kata sandi hanya karena seseorang mengaku dapat mengubah hasil lelang.</p></div>`],
+      ['Bagaimana Axiom Lelang mendefinisikan keberhasilan?', `<p>Axiom Lelang menilai keberhasilan proses dari kesiapan lot, kejelasan instruksi, disiplin limit, pelaksanaan sesuai ruang lingkup, dan penyampaian status sesi. Menang di atas batas ekonomis bukan hasil yang baik; berhenti ketika harga melewati limit dapat menjadi keputusan yang tepat.</p>`],
+      ['Pertanyaan singkat tentang pendampingan', `<h3>Apakah penawaran pada detik terakhir pasti menang?</h3><p>Tidak. Waktu penawaran tidak menghilangkan persaingan, aturan lot, gangguan teknis, atau kemungkinan peserta lain memiliki limit lebih tinggi.</p><h3>Apakah pendamping menentukan limit?</h3><p>Klien tetap menentukan batas maksimal berdasarkan pemeriksaan dan perhitungannya. Pendamping membantu menjaga instruksi agar tidak melewati limit yang telah dikonfirmasi.</p>`]
+    ], sources: [[officialSources.faq,'DJKN — FAQ Pelayanan dan Penawaran Lelang'], [officialSources.tips,'DJKN — Tips Membeli Barang melalui Lelang'], [officialSources.regulation,'PMK 122 Tahun 2023']],
+    related: [['/jasa-joki-lelang','Ruang lingkup pendampingan'], ['/cara-kerja','Cara kerja Axiom Lelang'], ['/panduan/risiko-mengikuti-lelang-online','Risiko mengikuti lelang online']],
+    cta: 'Konsultasikan lot dan limit Anda', waText: 'Halo Axiom Lelang, saya ingin memahami ruang lingkup pendampingan untuk lot saya.'
+  },
+  {
     file: 'berita/index.html',
     path: '/berita/',
     type: 'collection',
@@ -294,7 +326,7 @@ function schema(page) {
     : page.path.startsWith('/berita/') && page.path !== '/berita/'
       ? ['Berita', `${site}/berita/`]
       : null;
-  const organization = { '@id': `${site}/#organization` };
+  const organization = { '@id': company.entityId };
   const graph = [
     {
       '@type': page.type === 'about' ? 'AboutPage' : page.type === 'contact' ? 'ContactPage' : page.type === 'collection' ? 'CollectionPage' : 'WebPage',
@@ -321,15 +353,17 @@ function schema(page) {
   if (page.type === 'about') {
     graph.unshift(
       {
-        '@type': 'Organization', '@id': `${site}/#organization`, name: 'Axiom Systems', url: `${site}/tentang/`,
+        '@type': 'Organization', '@id': company.entityId, name: company.name, url: company.url,
         description: 'Penyedia Axiom Lelang, layanan pendampingan penawaran lelang online untuk pengguna lelang.go.id di Indonesia.',
         logo: { '@type': 'ImageObject', url: `${site}/images/logo-axiom-dark.png` },
+        sameAs: [company.github],
         brand: { '@id': `${site}/#brand` },
-        contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', telephone: '+62-851-9925-6640', url: `${site}/kontak/`, areaServed: 'ID', availableLanguage: 'id' }
+        email: company.email,
+        contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', telephone: siteConfig.contact.telephone, url: `${site}/kontak/`, areaServed: 'ID', availableLanguage: 'id' }
       },
       {
         '@type': 'Brand', '@id': `${site}/#brand`, name: 'Axiom Lelang', url: `${site}/`,
-        logo: `${site}/images/logo-axiom-dark.png`, description: 'Layanan pendampingan penawaran lelang online dari Axiom Systems.'
+        logo: `${site}/images/logo-axiom-dark.png`, description: `Layanan pendampingan penawaran lelang online dari ${company.name}.`
       }
     );
   }
@@ -346,7 +380,7 @@ function schema(page) {
     graph.push({
       '@type': page.schemaType ?? 'Article', '@id': `${url}#article`, headline: page.title, description: page.description,
       datePublished: published, dateModified: modified, ...(page.articleSection ? { articleSection: page.articleSection } : {}), inLanguage: 'id-ID', mainEntityOfPage: { '@id': `${url}#webpage` },
-      author: { '@type': 'Organization', name: 'Tim Editorial Axiom Systems', '@id': `${site}/#organization` },
+      author: { '@type': 'Organization', name: `Tim Editorial ${company.name}`, '@id': company.entityId },
       publisher: organization, image: `${site}/images/logo-axiom-dark.png`
     });
   }
@@ -392,7 +426,7 @@ function render(page) {
   <title>${escapeHtml(page.title)} | Axiom Lelang</title>
   <meta name="description" content="${escapeHtml(page.description)}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="author" content="Axiom Systems">
+  <meta name="author" content="${company.name}">
   <meta name="theme-color" content="#0B0C0E">
   <link rel="canonical" href="${url}">
   <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
@@ -419,7 +453,7 @@ function render(page) {
   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
   <header class="navbar-wrapper" id="navbar-wrapper">
     <nav class="navbar" id="navbar" aria-label="Navigasi utama">
-      <a href="/" class="brand-logo" aria-label="Axiom Systems — Beranda"><img src="/images/logo.svg" alt="Axiom Lelang oleh Axiom Systems" class="brand-img" width="50" height="50"></a>
+      <a href="/" class="brand-logo" aria-label="Axiom Lelang — Beranda"><img src="/images/logo.svg" alt="Axiom Lelang oleh ${company.name}" class="brand-img" width="50" height="50"></a>
       <div class="nav-menu" id="nav-menu">
         <a href="/" class="nav-link">Beranda</a>
         <a href="/jasa-joki-lelang" class="nav-link">Layanan</a>
@@ -442,7 +476,7 @@ function render(page) {
         <div class="eyebrow"><span class="dot-active"></span>${page.eyebrow}</div>
         <h1 class="content-title">${page.title}</h1>
         <p class="answer-block">${page.answer}</p>
-        <div class="content-meta"><span>Diperbarui: ${formattedModified}</span><span>Ditinjau oleh Tim Editorial Axiom Systems</span></div>
+        <div class="content-meta"><span>Diperbarui: ${formattedModified}</span><span>Ditinjau oleh Tim Editorial ${company.name}</span></div>
       </div>
     </header>
     <div class="container content-layout">
@@ -456,11 +490,11 @@ function render(page) {
     </div>
   </main>
   <footer class="footer"><div class="container"><div class="footer-grid">
-    <div class="footer-col"><a href="/" class="brand-logo"><img src="/images/logo.svg" alt="Axiom Lelang oleh Axiom Systems" class="footer-logo-img" width="180" height="38"></a><p class="footer-tagline">Axiom Lelang adalah layanan pendampingan lelang online independen dari Axiom Systems.</p></div>
+    <div class="footer-col"><a href="/" class="brand-logo"><img src="/images/logo.svg" alt="Axiom Lelang oleh ${company.name}" class="footer-logo-img" width="180" height="38"></a><p class="footer-tagline">Axiom Lelang adalah layanan pendampingan lelang online independen yang dioperasikan oleh <a href="${company.url}" rel="noopener">${company.name}</a>.</p></div>
     <div class="footer-col"><h2 class="footer-heading">Layanan</h2><ul class="footer-links"><li><a href="/jasa-joki-lelang">Jasa pendamping lelang</a></li><li><a href="/cara-kerja">Cara kerja</a></li><li><a href="/biaya">Biaya</a></li><li><a href="/bukti-kemenangan">Bukti kemenangan</a></li><li><a href="/case-study">Case study</a></li></ul></div>
     <div class="footer-col"><h2 class="footer-heading">Informasi</h2><ul class="footer-links"><li><a href="/panduan/apa-itu-lelang-go-id">Panduan lelang.go.id</a></li><li><a href="/panduan/cara-ikut-lelang-online">Cara ikut lelang</a></li><li><a href="/faq">FAQ</a></li><li><a href="/tentang">Tentang</a></li></ul></div>
-    <div class="footer-col"><h2 class="footer-heading">Kontak</h2><ul class="footer-links"><li><a href="/kontak">Kanal resmi</a></li><li><a href="${message}" target="_blank" rel="noopener noreferrer">WhatsApp</a></li></ul></div>
-  </div><div class="footer-bottom"><p>&copy; 2026 Axiom Systems. Hak cipta dilindungi.</p></div></div></footer>
+    <div class="footer-col"><h2 class="footer-heading">Kontak</h2><ul class="footer-links"><li><a href="/kontak">Kanal resmi</a></li><li><a href="${message}" target="_blank" rel="noopener noreferrer">WhatsApp</a></li><li><a href="${company.url}" rel="noopener">Website ${company.name}</a></li><li><a href="${company.github}" rel="noopener">GitHub ${company.name}</a></li></ul></div>
+  </div><div class="footer-bottom"><p>&copy; 2026 ${company.name}. Hak cipta dilindungi.</p></div></div></footer>
   <script src="/script.js"></script>
 </body>
 </html>`;

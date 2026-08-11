@@ -10,7 +10,7 @@ PANDUAN PESERTA
 
 Cara ikut lelang online dimulai dengan membuat dan memverifikasi akun lelang.go.id, memilih lot, membaca pengumuman, melengkapi persyaratan, serta menyetor uang jaminan sesuai batas waktunya. Setelah jaminan diverifikasi, peserta dapat mengajukan penawaran berdasarkan metode lot dan wajib menindaklanjuti hasil sesuai ketentuan.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Langkah mengikuti lelang online
 

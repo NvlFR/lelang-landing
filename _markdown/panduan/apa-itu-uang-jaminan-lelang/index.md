@@ -10,7 +10,7 @@ PERSYARATAN LELANG
 
 Uang Jaminan Penawaran Lelang adalah sejumlah uang yang harus disetor calon peserta sebagai syarat mengikuti lot tertentu. Besaran dan batas penyetorannya tercantum pada pengumuman. Peserta yang tidak disahkan sebagai pembeli menerima pengembalian sesuai ketentuan, tetapi biaya transaksi bank dapat menjadi tanggungan peserta.
 
-Diperbarui: 10 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems
+Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
 
 ## Apa fungsi uang jaminan?
 
