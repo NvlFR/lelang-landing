@@ -229,6 +229,24 @@ const pages = [
     cta: 'Butuh pendampingan sesi berikutnya?', waText: 'Halo Axiom Lelang, saya ingin konsultasi untuk sesi lelang berikutnya.'
   },
   {
+    file: 'berita/index.html',
+    path: '/berita/',
+    type: 'collection',
+    eyebrow: 'BERITA DAN UPDATE',
+    title: 'Berita dan Update Layanan Lelang',
+    description: 'Ikuti berita maintenance, gangguan, dan pembaruan layanan lelang berdasarkan pengumuman resmi DJKN.',
+    answer: 'Halaman Berita Axiom Lelang merangkum maintenance, gangguan, dan pembaruan layanan yang relevan bagi peserta lelang. Setiap artikel menyertakan sumber resmi dan membedakan fakta pengumuman dari langkah persiapan yang dapat dilakukan peserta.',
+    published: '2026-08-11',
+    modified: '2026-08-11',
+    sections: [
+      ['Update terbaru', `<div class="article-hub-grid"><a class="article-link-card" href="/berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/"><strong>Gangguan SSO DJKN Selesai 11 Agustus 2026</strong><span>Risalah Lelang kembali dapat digunakan • 11 Agustus 2026 →</span></a></div>`],
+      ['Periksa status sebelum jadwal lelang', `<p>Status sistem dapat berubah setelah artikel diterbitkan. Sebelum mengikuti sesi, periksa halaman maintenance DJKN, pengumuman lot, dan kanal resmi KPKNL yang menangani lelang tersebut.</p>`]
+    ],
+    related: [['/panduan/cara-ikut-lelang-online','Cara ikut lelang online'], ['/cara-kerja','Cara kerja pendampingan'], ['/kontak','Kontak Axiom Lelang']],
+    cta: 'Punya lot dengan jadwal dekat?',
+    waText: 'Halo Axiom Lelang, saya punya lot dengan jadwal dekat dan ingin meninjau kesiapan sesinya.'
+  },
+  {
     file: 'berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/index.html',
     path: '/berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/',
     type: 'article',
@@ -271,11 +289,15 @@ function schema(page) {
   const url = `${site}${page.path}`;
   const modified = page.modified ?? updated;
   const published = page.published ?? updated;
-  const section = page.path.startsWith('/panduan/') ? ['Panduan', `${site}/#panduan`] : page.path.startsWith('/berita/') ? ['Berita', `${site}/#berita`] : null;
+  const section = page.path.startsWith('/panduan/')
+    ? ['Panduan', `${site}/#panduan`]
+    : page.path.startsWith('/berita/') && page.path !== '/berita/'
+      ? ['Berita', `${site}/berita/`]
+      : null;
   const organization = { '@id': `${site}/#organization` };
   const graph = [
     {
-      '@type': page.type === 'about' ? 'AboutPage' : page.type === 'contact' ? 'ContactPage' : 'WebPage',
+      '@type': page.type === 'about' ? 'AboutPage' : page.type === 'contact' ? 'ContactPage' : page.type === 'collection' ? 'CollectionPage' : 'WebPage',
       '@id': `${url}#webpage`,
       url,
       name: page.title,
@@ -355,8 +377,8 @@ function render(page) {
   const message = `${wa}?text=${encodeURIComponent(page.waText)}`;
   const breadcrumb = page.path.startsWith('/panduan/')
     ? `<a href="/">Beranda</a><span>/</span><a href="/#panduan">Panduan</a><span>/</span><span>${escapeHtml(page.title)}</span>`
-    : page.path.startsWith('/berita/')
-      ? `<a href="/">Beranda</a><span>/</span><a href="/#berita">Berita</a><span>/</span><span>${escapeHtml(page.title)}</span>`
+    : page.path.startsWith('/berita/') && page.path !== '/berita/'
+      ? `<a href="/">Beranda</a><span>/</span><a href="/berita/">Berita</a><span>/</span><span>${escapeHtml(page.title)}</span>`
       : `<a href="/">Beranda</a><span>/</span><span>${escapeHtml(page.title)}</span>`;
   const body = page.sections.map(([heading, html]) => `<section id="${slugify(heading)}"><h2>${heading}</h2>${html}</section>`).join('\n');
   const sources = page.sources ? `<section id="sumber-resmi"><h2>Sumber resmi</h2><p>Informasi prosedural pada halaman ini diringkas dari sumber pemerintah berikut. Selalu periksa kembali pengumuman lot dan ketentuan terbaru.</p><ul class="source-list">${page.sources.map(([href,label]) => `<li><a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a></li>`).join('')}</ul></section>` : '';
@@ -404,6 +426,7 @@ function render(page) {
         <a href="/cara-kerja" class="nav-link">Cara Kerja</a>
         <a href="/biaya" class="nav-link">Biaya</a>
         <a href="/bukti-kemenangan" class="nav-link">Bukti Menang</a>
+        <a href="/berita" class="nav-link">Berita</a>
         <a href="/faq" class="nav-link">FAQ</a>
         <a href="/tentang" class="nav-link">Tentang</a>
       </div>
@@ -443,7 +466,11 @@ function render(page) {
 </html>`;
 }
 
-for (const page of pages) {
+const selectedPath = process.env.PAGE_PATH;
+const selectedPages = selectedPath ? pages.filter((page) => page.path === selectedPath) : pages;
+if (selectedPath && selectedPages.length === 0) throw new Error(`Halaman tidak ditemukan untuk PAGE_PATH=${selectedPath}`);
+
+for (const page of selectedPages) {
   const target = resolve(root, page.file);
   await mkdir(dirname(target), { recursive: true });
   const html = render(page)
@@ -452,4 +479,4 @@ for (const page of pages) {
   await writeFile(target, html);
 }
 
-console.log(`Generated ${pages.length} static pages.`);
+console.log(`Generated ${selectedPages.length} static pages.`);

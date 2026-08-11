@@ -8,6 +8,7 @@ const MARKDOWN_ASSETS = new Map([
   ['/kontak/', '/_markdown/kontak/index.md'],
   ['/case-study/', '/_markdown/case-study/index.md'],
   ['/bukti-kemenangan/', '/_markdown/bukti-kemenangan/index.md'],
+  ['/berita/', '/_markdown/berita/index.md'],
   ['/berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/', '/_markdown/berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/index.md'],
   ['/panduan/apa-itu-lelang-go-id/', '/_markdown/panduan/apa-itu-lelang-go-id/index.md'],
   ['/panduan/cara-ikut-lelang-online/', '/_markdown/panduan/cara-ikut-lelang-online/index.md'],

@@ -7,6 +7,7 @@ const pages = [
   'index.html', 'faq/index.html', 'jasa-joki-lelang/index.html', 'cara-kerja/index.html', 'biaya/index.html',
   'tentang/index.html', 'kontak/index.html', 'case-study/index.html',
   'bukti-kemenangan/index.html',
+  'berita/index.html',
   'berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/index.html',
   'panduan/apa-itu-lelang-go-id/index.html', 'panduan/cara-ikut-lelang-online/index.html',
   'panduan/cara-daftar-lelang-go-id/index.html', 'panduan/apa-itu-open-bidding/index.html',
@@ -37,7 +38,8 @@ for (const file of pages) {
     ['meta description', count(html, /<meta\s+name="description"\s+content="[^"]+"\s*\/?>/gi), 1],
     ['canonical', count(html, /<link\s+rel="canonical"\s+href="[^"]+"\s*\/?>/gi), 1],
     ['H1', count(html, /<h1(?:\s[^>]*)?>/gi), 1],
-    ['og:site_name Axiom Lelang', count(html, /<meta\s+property="og:site_name"\s+content="Axiom Lelang"\s*\/?>/gi), 1]
+    ['og:site_name Axiom Lelang', count(html, /<meta\s+property="og:site_name"\s+content="Axiom Lelang"\s*\/?>/gi), 1],
+    ['nav link Berita', count(html, /<a\s+href="\/berita\/"\s+class="nav-link(?:\s+active)?">Berita<\/a>/gi), 1]
   ];
 
   for (const [label, actual, expected] of checks) {
