@@ -161,4 +161,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── 8. Conversion Tracking Hooks ──
+  // Tetap aman tanpa Meta Pixel. Event otomatis terkirim setelah `fbq` atau
+  // Google Tag Manager dipasang pada halaman.
+  if (document.body.classList.contains('campaign-landing')) {
+    const viewPayload = {
+      content_name: 'Konsultasi Axiom Lelang',
+      content_category: 'Pendampingan lelang online'
+    };
+
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'ViewContent', viewPayload);
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'view_content', ...viewPayload });
+  }
+
+  document.querySelectorAll('[data-meta-event]').forEach(link => {
+    link.addEventListener('click', () => {
+      const eventName = link.dataset.metaEvent || 'Contact';
+      const ctaLocation = link.dataset.ctaLocation || 'unknown';
+      const eventPayload = {
+        content_name: 'Konsultasi Axiom Lelang',
+        content_category: 'Pendampingan lelang online',
+        cta_location: ctaLocation
+      };
+
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', eventName, eventPayload);
+      }
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'whatsapp_contact',
+        meta_event_name: eventName,
+        ...eventPayload
+      });
+    });
+  });
+
 });

@@ -18,6 +18,7 @@ const pages = [
   ['/kontak/', 'kontak/index.html'],
   ['/case-study/', 'case-study/index.html'],
   ['/bukti-kemenangan/', 'bukti-kemenangan/index.html'],
+  ['/konsultasi-lelang/', 'konsultasi-lelang/index.html'],
   ['/berita/', 'berita/index.html'],
   ['/berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/', 'berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/index.html'],
   ['/panduan/apa-itu-lelang-go-id/', 'panduan/apa-itu-lelang-go-id/index.html'],
