@@ -7,6 +7,7 @@ const pages = [
   'index.html', 'faq/index.html', 'jasa-joki-lelang/index.html', 'cara-kerja/index.html', 'biaya/index.html',
   'tentang/index.html', 'kontak/index.html', 'case-study/index.html',
   'bukti-kemenangan/index.html',
+  'konsultasi-lelang/index.html',
   'berita/index.html',
   'berita/gangguan-sso-djkn-risalah-lelang-11-agustus-2026/index.html',
   'panduan/apa-itu-lelang-go-id/index.html', 'panduan/cara-ikut-lelang-online/index.html',
