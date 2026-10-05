@@ -58,6 +58,7 @@ lelang-landing/
 ├── panduan/                      # Knowledge base lelang online
 ├── bukti-kemenangan/             # Galeri bukti hasil sesi
 ├── scripts/site-config.mjs       # Source of truth entitas dan URL resmi
+├── scripts/proof-data.mjs        # Source of truth gambar bukti dan penempatannya
 ├── scripts/generate-pages.mjs    # Generator halaman konten
 ├── scripts/generate-markdown.mjs # Generator Markdown untuk agents
 ├── scripts/validate-site.mjs     # Validasi metadata, schema, link, sitemap
@@ -82,6 +83,8 @@ npx html-validate '**/*.html'
 ```
 
 Generator Markdown membutuhkan `pandoc`. Setelah HTML berubah, bangun ulang halaman Markdown agar kedua representasi tetap sinkron.
+
+Untuk menambah bukti, taruh hanya gambar final yang siap publik di `bukti-kemenangan/`, lalu daftarkan path, teks alternatif, dimensi, serta penempatannya di `scripts/proof-data.mjs`. Tambahkan pengecualian file itu di `.assetsignore`, jalankan generator dan validator di atas. Simpan screenshot mentah atau file kerja di luar folder aset publik.
 
 Pengujian content negotiation:
 

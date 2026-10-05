@@ -10,27 +10,29 @@ HASIL AXIOM LELANG
 
 Galeri ini berisi dokumentasi hasil dan aktivitas penawaran dari sesi lelang online yang telah ditangani Axiom Lelang. Gambar ditampilkan sebagai bukti proses nyata, bukan simulasi atau contoh fiktif.
 
-Diperbarui: 11 Agustus 2026 Ditinjau oleh Tim Editorial Axiom Systems Co
-
 ## Dokumentasi hasil penawaran
 
-[![Bukti hasil penawaran Axiom Lelang pada 4 Agustus 2026](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/1.svg)](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/1.svg)
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 5](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/5.png)
 
-**Dokumentasi sesi 01** Hasil penawaran • 4 Agustus 2026
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 6](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/6.png)
 
-[![Log penawaran sesi Axiom Lelang pada 3 Agustus 2026](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/2.svg)](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/2.svg)
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 7](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/7.png)
 
-**Dokumentasi sesi 02** Log penawaran • 3 Agustus 2026
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 8](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/8.png)
 
-[![Bukti hasil penawaran Axiom Lelang pada 5 Agustus 2026](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/3.svg)](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/3.svg)
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 9](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/9.png)
 
-**Dokumentasi sesi 03** Hasil penawaran • 5 Agustus 2026
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 10](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/10.png)
 
-[![Log penawaran sesi Axiom Lelang pada 5 Agustus 2026](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/4.svg)](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/4.svg)
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 11](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/11.png)
 
-**Dokumentasi sesi 04** Log penawaran • 5 Agustus 2026
+![Dokumentasi hasil penawaran Axiom Lelang, gambar 1](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/1.svg)
 
-Klik gambar untuk membuka dokumentasi dalam ukuran penuh.
+![Log penawaran Axiom Lelang, gambar 2](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/2.svg)
+
+![Dokumentasi hasil penawaran Axiom Lelang, gambar 3](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/3.svg)
+
+![Log penawaran Axiom Lelang, gambar 4](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/4.svg)
 
 ## Cara membaca bukti
 

@@ -124,7 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── 6. Scroll Reveal Animation (IntersectionObserver) ──
   const revealElements = document.querySelectorAll('.reveal');
 
-  if (revealElements.length > 0) {
+  if (revealElements.length > 0 && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    revealElements.forEach(el => el.classList.add('reveal-pending'));
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

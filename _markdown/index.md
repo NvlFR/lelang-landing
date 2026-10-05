@@ -124,21 +124,13 @@ HASIL NYATA AXIOM LELANG
 
 Dokumentasi hasil dan log penawaran asli dari sesi lelang online Axiom Lelang, bukan simulasi atau contoh fiktif.
 
-[![Bukti hasil penawaran Axiom Lelang pada 4 Agustus 2026](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/1.svg)](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/1.svg)
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 5](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/5.png)
 
-**Dokumentasi sesi 01** Hasil penawaran • 4 Agustus 2026
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 6](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/6.png)
 
-[![Log penawaran sesi Axiom Lelang pada 3 Agustus 2026](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/2.svg)](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/2.svg)
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 7](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/7.png)
 
-**Dokumentasi sesi 02** Log penawaran • 3 Agustus 2026
-
-[![Bukti hasil penawaran Axiom Lelang pada 5 Agustus 2026](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/3.svg)](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/3.svg)
-
-**Dokumentasi sesi 03** Hasil penawaran • 5 Agustus 2026
-
-[![Log penawaran sesi Axiom Lelang pada 5 Agustus 2026](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/4.svg)](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/4.svg)
-
-**Dokumentasi sesi 04** Log penawaran • 5 Agustus 2026
+![Bukti hasil lelang menang dengan penawaran Anda tertinggi, gambar 8](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/8.png)
 
 [Lihat Semua Bukti](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/)
 

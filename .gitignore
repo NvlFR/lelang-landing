@@ -1,5 +1,12 @@
 site-gladia.io
 
+# Arsip sumber bukti tetap lokal; hanya gambar final yang masuk repository.
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
 # Internal product, growth, and operations documents live in the private
 # axiomsystemsco/axiom-lelang-internal repository.
 PRD.md

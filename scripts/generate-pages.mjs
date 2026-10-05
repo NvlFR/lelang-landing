@@ -1,7 +1,8 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { siteConfig } from './site-config.mjs';
+import { proofs } from './proof-data.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const site = siteConfig.auction.url;
@@ -105,21 +106,15 @@ const pages = [
   {
     file: 'bukti-kemenangan/index.html', path: '/bukti-kemenangan/', type: 'webpage', eyebrow: 'HASIL AXIOM LELANG',
     title: 'Bukti Kemenangan Axiom Lelang',
+    showUpdated: false,
+    modified: '2026-10-05',
     description: 'Lihat dokumentasi hasil dan log penawaran dari sesi lelang online yang telah ditangani oleh Axiom Lelang.',
     answer: 'Galeri ini berisi dokumentasi hasil dan aktivitas penawaran dari sesi lelang online yang telah ditangani Axiom Lelang. Gambar ditampilkan sebagai bukti proses nyata, bukan simulasi atau contoh fiktif.',
-    images: [
-      ['/bukti-kemenangan/1.svg', 'Bukti hasil penawaran Axiom Lelang pada 4 Agustus 2026'],
-      ['/bukti-kemenangan/2.svg', 'Log penawaran sesi Axiom Lelang pada 3 Agustus 2026'],
-      ['/bukti-kemenangan/3.svg', 'Bukti hasil penawaran Axiom Lelang pada 5 Agustus 2026'],
-      ['/bukti-kemenangan/4.svg', 'Log penawaran sesi Axiom Lelang pada 5 Agustus 2026']
-    ],
+    images: proofs.map(({ src, alt }) => [src, alt]),
     sections: [
       ['Dokumentasi hasil penawaran', `<div class="proof-gallery">
-        <figure class="proof-card"><a href="/bukti-kemenangan/1.svg" target="_blank" rel="noopener noreferrer" aria-label="Buka bukti hasil penawaran 1 dalam ukuran penuh"><img src="/bukti-kemenangan/1.svg" alt="Bukti hasil penawaran Axiom Lelang pada 4 Agustus 2026" width="778" height="905" loading="eager" decoding="async"></a><figcaption><strong>Dokumentasi sesi 01</strong><span>Hasil penawaran • 4 Agustus 2026</span></figcaption></figure>
-        <figure class="proof-card"><a href="/bukti-kemenangan/2.svg" target="_blank" rel="noopener noreferrer" aria-label="Buka bukti hasil penawaran 2 dalam ukuran penuh"><img src="/bukti-kemenangan/2.svg" alt="Log penawaran sesi Axiom Lelang pada 3 Agustus 2026" width="778" height="905" loading="lazy" decoding="async"></a><figcaption><strong>Dokumentasi sesi 02</strong><span>Log penawaran • 3 Agustus 2026</span></figcaption></figure>
-        <figure class="proof-card"><a href="/bukti-kemenangan/3.svg" target="_blank" rel="noopener noreferrer" aria-label="Buka bukti hasil penawaran 3 dalam ukuran penuh"><img src="/bukti-kemenangan/3.svg" alt="Bukti hasil penawaran Axiom Lelang pada 5 Agustus 2026" width="778" height="905" loading="lazy" decoding="async"></a><figcaption><strong>Dokumentasi sesi 03</strong><span>Hasil penawaran • 5 Agustus 2026</span></figcaption></figure>
-        <figure class="proof-card"><a href="/bukti-kemenangan/4.svg" target="_blank" rel="noopener noreferrer" aria-label="Buka bukti hasil penawaran 4 dalam ukuran penuh"><img src="/bukti-kemenangan/4.svg" alt="Log penawaran sesi Axiom Lelang pada 5 Agustus 2026" width="778" height="905" loading="lazy" decoding="async"></a><figcaption><strong>Dokumentasi sesi 04</strong><span>Log penawaran • 5 Agustus 2026</span></figcaption></figure>
-      </div><p class="proof-help">Klik gambar untuk membuka dokumentasi dalam ukuran penuh.</p>`],
+${proofs.map((proof, index) => `        ${renderProofCard(proof, index === 0 ? 'eager' : 'lazy')}`).join('\n')}
+      </div>`],
       ['Cara membaca bukti', `<ul><li>Baris berwarna hijau menunjukkan penawaran tertinggi yang disahkan sistem sebagai pemenang.</li><li>Tanggal, waktu, dan nilai penawaran berasal dari tampilan log penawaran pada platform lelang.</li><li>Identitas lot dan klien tidak ditampilkan untuk menjaga privasi.</li></ul>`],
       ['Hasil setiap lot dapat berbeda', `<div class="notice-card"><p><strong>Dokumentasi ini menunjukkan hasil sesi yang telah terjadi.</strong> Hasil lot berikutnya tetap dipengaruhi persaingan, limit anggaran, jadwal, dan mekanisme resmi pada lelang.go.id.</p></div>`]
     ],
@@ -313,6 +308,36 @@ function escapeHtml(value) {
   return value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 }
 
+function renderProofCard(proof, loading = 'lazy') {
+  const src = escapeHtml(proof.src);
+  const wide = proof.width > proof.height ? ' proof-card-wide' : '';
+  return `<figure class="proof-card${wide}" style="--proof-ratio: ${proof.width} / ${proof.height}"><img src="${src}" alt="${escapeHtml(proof.alt)}" width="${proof.width}" height="${proof.height}" loading="${loading}" decoding="async"></figure>`;
+}
+
+function renderCampaignCard(proof) {
+  const src = escapeHtml(proof.src);
+  return `<figure class="campaign-proof-card"><img src="${src}" alt="${escapeHtml(proof.alt)}" width="${proof.width}" height="${proof.height}" loading="lazy" decoding="async"></figure>`;
+}
+
+function replaceProofBlock(html, name, content) {
+  const start = `<!-- proof:${name}:start -->`;
+  const end = `<!-- proof:${name}:end -->`;
+  const first = html.indexOf(start);
+  const last = html.indexOf(end);
+  if (first < 0 || last < first || html.indexOf(start, first + start.length) >= 0 || html.indexOf(end, last + end.length) >= 0) {
+    throw new Error(`Blok bukti ${name} harus memiliki tepat satu pasang penanda`);
+  }
+  const indent = html.slice(html.lastIndexOf('\n', first) + 1, first);
+  return `${html.slice(0, first + start.length)}\n${content}\n${indent}${html.slice(last)}`;
+}
+
+async function updateProofBlocks(file, blocks) {
+  const target = resolve(root, file);
+  let html = await readFile(target, 'utf8');
+  for (const [name, content] of blocks) html = replaceProofBlock(html, name, content);
+  await writeFile(target, html);
+}
+
 function slugify(value) {
   return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
@@ -475,8 +500,7 @@ function render(page) {
         <nav class="breadcrumbs" aria-label="Breadcrumb">${breadcrumb}</nav>
         <div class="eyebrow"><span class="dot-active"></span>${page.eyebrow}</div>
         <h1 class="content-title">${page.title}</h1>
-        <p class="answer-block">${page.answer}</p>
-        <div class="content-meta"><span>Diperbarui: ${formattedModified}</span><span>Ditinjau oleh Tim Editorial ${company.name}</span></div>
+        <p class="answer-block">${page.answer}</p>${page.showUpdated === false ? '' : `\n        <div class="content-meta"><span>Diperbarui: ${formattedModified}</span><span>Ditinjau oleh Tim Editorial ${company.name}</span></div>`}
       </div>
     </header>
     <div class="container content-layout">
@@ -511,6 +535,21 @@ for (const page of selectedPages) {
     .replace(/href="(\/(?!$|#)[^".?#]*[^/".?#])"/g, 'href="$1/"')
     .replace(/[ \t]+$/gm, '');
   await writeFile(target, html);
+}
+
+if (!selectedPath || selectedPath === '/bukti-kemenangan/') {
+  const homeProofs = proofs.filter((proof) => proof.home);
+  const campaignProofs = proofs.filter((proof) => proof.campaign);
+  const campaignHero = proofs.find((proof) => proof.campaignHero);
+  if (!campaignHero) throw new Error('Satu bukti harus dipilih sebagai campaignHero');
+
+  await updateProofBlocks('index.html', [
+    ['home', homeProofs.map((proof) => `          ${renderProofCard(proof)}`).join('\n')]
+  ]);
+  await updateProofBlocks('konsultasi-lelang/index.html', [
+    ['hero', `          <figure class="campaign-proof-main">\n            <img src="${escapeHtml(campaignHero.src)}" alt="${escapeHtml(campaignHero.alt)}" width="${campaignHero.width}" height="${campaignHero.height}" fetchpriority="high" decoding="async">\n            <figcaption><strong>Dokumentasi penawaran</strong><span>Identitas klien disamarkan</span></figcaption>\n          </figure>`],
+    ['campaign', campaignProofs.map((proof) => `          ${renderCampaignCard(proof)}`).join('\n')]
+  ]);
 }
 
 console.log(`Generated ${selectedPages.length} static pages.`);

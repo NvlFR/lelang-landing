@@ -16,9 +16,9 @@ Limit sesuai instruksi Anda Proses transparan Pendampingan langsung
 
 ● Konsultasi melalui nomor resmi Axiom Lelang
 
-![Dokumentasi hasil penawaran Axiom Lelang](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/1.svg)
+![Dokumentasi hasil penawaran Axiom Lelang, gambar 1](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/1.svg)
 
-**Dokumentasi sesi nyata** Identitas klien disamarkan
+**Dokumentasi penawaran** Identitas klien disamarkan
 
 ![](https://joki-lelang.axiomsystemsco.com/images/logo.svg) **Layanan Axiom Systems Co**Independen dan beroperasi di Indonesia
 
@@ -28,7 +28,11 @@ BUKTI PROSES NYATA
 
 Cuplikan berikut berasal dari dokumentasi penawaran Axiom Lelang. Informasi sensitif dan identitas klien tidak ditampilkan.
 
-[![Log penawaran sesi Axiom Lelang](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/2.svg)Lihat dokumentasi 01 ↗](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/2.svg) [![Hasil penawaran sesi Axiom Lelang](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/3.svg)Lihat dokumentasi 02 ↗](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/3.svg) [![Log hasil sesi Axiom Lelang](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/4.svg)Lihat dokumentasi 03 ↗](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/4.svg)
+![Log penawaran Axiom Lelang, gambar 2](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/2.svg)
+
+![Dokumentasi hasil penawaran Axiom Lelang, gambar 3](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/3.svg)
+
+![Log penawaran Axiom Lelang, gambar 4](https://joki-lelang.axiomsystemsco.com/bukti-kemenangan/4.svg)
 
 Dokumentasi menunjukkan hasil sesi yang sudah terjadi. Setiap lot memiliki persaingan, jadwal, dan kondisi yang berbeda.
 

@@ -1,6 +1,7 @@
 import { access, readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { proofs } from './proof-data.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const pages = [
@@ -36,6 +37,12 @@ function publicTarget(path) {
 
 for (const file of pages) {
   const html = await readFile(resolve(root, file), 'utf8');
+  if (/<a\b[^>]*\bhref="\/bukti-kemenangan\/[^\"]+\.(?:svg|png|jpe?g|webp)"/i.test(html)) {
+    errors.push(`${file}: gambar bukti tidak boleh menjadi tautan`);
+  }
+  if (html.includes('Klik gambar untuk membuka dokumentasi dalam ukuran penuh.')) {
+    errors.push(`${file}: instruksi klik gambar harus dihapus`);
+  }
   const checks = [
     ['title', count(html, /<title>[^<]+<\/title>/gi), 1],
     ['meta description', count(html, /<meta\s+name="description"\s+content="[^"]+"\s*\/?>/gi), 1],
@@ -92,10 +99,80 @@ for (const url of sitemapUrls) {
 
 const assetsIgnore = await readFile(resolve(root, '.assetsignore'), 'utf8');
 const ignoredAssetPatterns = new Set(assetsIgnore.split(/\r?\n/));
-for (const privateAssetPattern of ['docs/**', 'scripts/**', 'PRD*.md', 'worker.js', 'wrangler.jsonc', '.env*', '.dev.vars*']) {
+for (const privateAssetPattern of ['docs/**', 'scripts/**', 'PRD*.md', 'worker.js', 'wrangler.jsonc', '.env*', '.dev.vars*', '*.zip', '*.rar', '*.7z', '*.tar', '*.gz']) {
   if (!ignoredAssetPatterns.has(privateAssetPattern)) {
     errors.push(`.assetsignore: pola internal belum dilindungi: ${privateAssetPattern}`);
   }
+}
+
+const proofSources = proofs.map((proof) => proof.src);
+if (new Set(proofSources).size !== proofSources.length) errors.push('Daftar bukti memuat path duplikat');
+if (proofs.filter((proof) => proof.campaignHero).length !== 1) errors.push('Harus ada tepat satu campaignHero');
+for (const proof of proofs) {
+  if (!/^\/bukti-kemenangan\/[a-z0-9][a-z0-9-]*\.(?:svg|png|jpe?g|webp)$/.test(proof.src)) {
+    errors.push(`Path bukti tidak aman: ${proof.src}`);
+  }
+  if (!proof.alt || !Number.isInteger(proof.width) || proof.width <= 0 || !Number.isInteger(proof.height) || proof.height <= 0) {
+    errors.push(`${proof.src}: alt atau dimensi bukti tidak valid`);
+  }
+}
+
+if (!ignoredAssetPatterns.has('bukti-kemenangan/*')) {
+  errors.push('.assetsignore harus menutup semua aset bukti secara default');
+}
+const allowedProofAssets = new Set(['!bukti-kemenangan/index.html', ...proofSources.map((src) => `!${src.slice(1)}`)]);
+const actualAllowedProofAssets = [...ignoredAssetPatterns].filter((pattern) => pattern.startsWith('!bukti-kemenangan/'));
+for (const pattern of allowedProofAssets) {
+  if (!actualAllowedProofAssets.includes(pattern)) errors.push(`.assetsignore belum mengizinkan bukti: ${pattern}`);
+}
+for (const pattern of actualAllowedProofAssets) {
+  if (!allowedProofAssets.has(pattern)) errors.push(`.assetsignore mengizinkan aset bukti di luar daftar: ${pattern}`);
+}
+
+function proofBlock(html, name) {
+  const match = html.match(new RegExp(`<!-- proof:${name}:start -->([\\s\\S]*?)<!-- proof:${name}:end -->`));
+  if (!match) errors.push(`Blok bukti ${name} tidak ditemukan`);
+  return match?.[1] ?? '';
+}
+
+function proofImages(html) {
+  return [...html.matchAll(/<img\b[^>]*>/g)].map(([tag]) => {
+    const attribute = (name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1] ?? '';
+    return {
+      src: attribute('src'),
+      alt: attribute('alt').replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&lt;', '<').replaceAll('&gt;', '>'),
+      width: Number(attribute('width')),
+      height: Number(attribute('height'))
+    };
+  });
+}
+
+function checkProofImages(label, html, expected) {
+  const actual = proofImages(html);
+  const expectedImages = expected.map(({ src, alt, width, height }) => ({ src, alt, width, height }));
+  if (JSON.stringify(actual) !== JSON.stringify(expectedImages)) {
+    errors.push(`${label}: gambar bukti tidak sinkron dengan proof-data.mjs`);
+  }
+}
+
+const proofPage = await readFile(resolve(root, 'bukti-kemenangan/index.html'), 'utf8');
+const proofMarkdown = await readFile(resolve(root, '_markdown/bukti-kemenangan/index.md'), 'utf8');
+if (/\[!\[[^\]]*\]\([^)]*\/bukti-kemenangan\/[^)]*\)\]\(/.test(proofMarkdown)) {
+  errors.push('Markdown bukti masih menautkan gambar');
+}
+const homepageProof = await readFile(resolve(root, 'index.html'), 'utf8');
+const campaignPage = await readFile(resolve(root, 'konsultasi-lelang/index.html'), 'utf8');
+checkProofImages('Galeri bukti', proofPage.match(/<div class="proof-gallery">([\s\S]*?)<\/div>/)?.[1] ?? '', proofs);
+checkProofImages('Homepage', proofBlock(homepageProof, 'home'), proofs.filter((proof) => proof.home));
+checkProofImages('Hero kampanye', proofBlock(campaignPage, 'hero'), proofs.filter((proof) => proof.campaignHero));
+checkProofImages('Galeri kampanye', proofBlock(campaignPage, 'campaign'), proofs.filter((proof) => proof.campaign));
+
+const proofSchema = [...proofPage.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+  .flatMap((match) => JSON.parse(match[1])['@graph'] ?? [])
+  .filter((entry) => entry['@type'] === 'ImageObject')
+  .map((entry) => entry.contentUrl);
+if (JSON.stringify(proofSchema) !== JSON.stringify(proofSources.map((src) => `https://joki-lelang.axiomsystemsco.com${src}`))) {
+  errors.push('ImageObject schema bukti tidak sinkron dengan proof-data.mjs');
 }
 
 const publicText = await Promise.all(pages.map((file) => readFile(resolve(root, file), 'utf8')));

@@ -36,3 +36,24 @@ package.json
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Hanya halaman dan bukti yang ditinjau yang boleh menjadi aset publik.
+# Tambahkan pengecualian eksplisit saat bukti baru masuk proof-data.mjs.
+bukti-kemenangan/*
+!bukti-kemenangan/index.html
+!bukti-kemenangan/1.svg
+!bukti-kemenangan/2.svg
+!bukti-kemenangan/3.svg
+!bukti-kemenangan/4.svg
+!bukti-kemenangan/5.png
+!bukti-kemenangan/6.png
+!bukti-kemenangan/7.png
+!bukti-kemenangan/8.png
+!bukti-kemenangan/9.png
+!bukti-kemenangan/10.png
+!bukti-kemenangan/11.png
